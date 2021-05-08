@@ -1,6 +1,6 @@
-# CPSC-1517 - **Student Workbook** (Jan 2021)
+# CPSC-1517 - **~~Student~~ Instructor Workbook** (May 2021)
 
-> **STUDENT_NAME**
+> **Dan Gilleland**
 
 This repository is a **Student Workbook** "template repository" containing [**demos**](./src/demos/ReadMe.md) as well as [**tutorials** and **practice materials**](./src/ReadMe.md). Learning Outcomes ([**LOGs**](./docs/learning_outcomes/ReadMe.md)) and other useful notes can be found in the [**docs** folder](./docs). Also, you are encouraged to use the [**docs/mynotes**](./docs/mynotes) folder for journaling what you are learning throughout this course.
 
