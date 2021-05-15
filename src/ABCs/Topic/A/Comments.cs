@@ -7,6 +7,13 @@
  */
 namespace Topic.A.Examples
 {
+    namespace Temp
+    {
+        public class Nothingness
+        {
+            
+        }
+    }
     /// <summary>
     /// Comments illustrates multi-line, single-line, and XML comments.
     /// </summary>

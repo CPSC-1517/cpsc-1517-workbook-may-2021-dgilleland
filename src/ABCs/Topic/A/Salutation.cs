@@ -1,19 +1,19 @@
 // Instructions: Enter comments in each blank to describe the following code
-// _____________________________________________________
+// Declare a Namespace or "group" under which to place my Salutation class as a way of organizing my classes/data types
 namespace Topic.A
 {
 
-    // _____________________________________________________________________
+    // Declare a new data type called "Salutation" as a class type
     public class Salutation
     {
-        // _________________________________________________________________
+        // Declare a static method called "Greeting" that has no parameters and promises to return a string.
         public static string Greeting()
         {
-            // _____________________________________________________________
+            // Return a hard-coded (or "literal") string value
             return "Hello World!";
         } // end of Greeting()
 
-        // _________________________________________________________________
+        // Declare a static method called "Greeting" that has a single parameter (a string) and promises to return a string. This method is an overload of the previous method.
         public static string Greeting(string name)
         {
             // _____________________________________________________________
