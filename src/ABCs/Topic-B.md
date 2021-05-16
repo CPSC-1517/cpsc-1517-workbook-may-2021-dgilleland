@@ -374,7 +374,7 @@ Create the CanadianAddress class so that it can represent the majority of possib
   * RuralRoute : String
   * BoxNumber : String
 
-Also create a driver for testing this class; you may use any name for the driver as long as it is not already mentioned in this topic (we need it unique to avoid *naming collisions* in our namespace). In the driver, create instances of the CanadianAddress class that represents your current address as well as the address of your school (use hard-coded data).
+Also create a driver for testing this class; you may use any name for the driver as long as it is not already mentioned in this topic (we need it unique to avoid *naming collisions* in our namespace). In the driver, create instances of the CanadianAddress class that represents a fictional home address as well as the address of your school (use hard-coded data).
 
 ----
 
