@@ -172,25 +172,25 @@ namespace Topic.B.Examples
             bob.GradePointAverage = 6.76;
 
             mary.Name = "Mary McTavishski";
-            mary.Gender = 'C'; //Current
+            mary.Status = 'C'; //Current
             mary.Program = "COMP";
             mary.StudentId = 200765790;
             mary.GradePointAverage = 5.76;
 
             joe.Name = "Joe Jetson";
-            joe.Gender = 'C'; // Current
+            joe.Status = 'C'; // Current
             joe.Program = "COMP";
             joe.StudentId = 200765792;
             joe.GradePointAverage = 4.66;
 
             susan.Name = "Susan Orlando";
-            susan.Gender = 'C'; // Current
+            susan.Status = 'C'; // Current
             susan.Program = "COMP";
             susan.StudentId = 200765795;
             susan.GradePointAverage = 8.54;
 
             frank.Name = "Frank Smith";
-            frank.Gender = 'C'; // Current
+            frank.Status = 'C'; // Current
             frank.Program = "COMP";
             frank.StudentId = 200765797;
             frank.GradePointAverage = 8.52;
