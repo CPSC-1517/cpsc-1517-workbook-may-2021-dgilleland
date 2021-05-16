@@ -1,3 +1,4 @@
+using static System.Console;
 namespace Topic.B
 {
     public class DemoAccountDriver
@@ -10,6 +11,9 @@ namespace Topic.B
             myAccount.Balance = 500000.00;
             myAccount.OverdraftLimit = 1000000.00;
             myAccount.AccountNumber = 123456;
+
+            WriteLine($"My new account number is {myAccount.AccountNumber}. I have a balance of {myAccount.Balance:C} with an overdraft limit of {myAccount.OverdraftLimit:C}.");
+            WriteLine("... I wish.");
         }
     }
 }
