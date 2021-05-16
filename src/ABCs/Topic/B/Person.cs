@@ -1,4 +1,4 @@
-namespace Topic.B.Examples
+namespace Topic.B
 {
     public class Person
     {
