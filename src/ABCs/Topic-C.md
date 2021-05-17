@@ -44,7 +44,7 @@ This simple class also illustrates encapsulation, but with one of the fields bei
 ```csharp
 public class Account
 {
-    private readonly int AccountNumber;
+    public readonly int AccountNumber;
     private double _Balance;
     private double _OverdraftLimit;
 
