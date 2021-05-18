@@ -201,7 +201,7 @@ namespace Topic.B.Examples
         public static void displayStudentInformation(Student someStudent)
         {
             System.Console.WriteLine(someStudent.Name);
-            System.Console.WriteLine(someStudent.Gender);
+            System.Console.WriteLine(someStudent.Status);
             System.Console.WriteLine(someStudent.Program);
             System.Console.WriteLine(someStudent.StudentId);
             System.Console.WriteLine(someStudent.GradePointAverage);
