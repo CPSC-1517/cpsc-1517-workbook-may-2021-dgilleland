@@ -1,10 +1,13 @@
-using static System.Configuration;
+using static System.Console;
 using System;
 
 namespace Topic.Numbering
 {
-    public static void Main(string[] args)
+    public class DemoDriver
     {
-        
+        public static void Main(string[] args)
+        {
+            WriteLine(typeof(DemoDriver).GetType.FullName);
+        }
     }
 }
