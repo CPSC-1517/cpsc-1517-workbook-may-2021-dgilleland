@@ -1,12 +1,10 @@
-using static System.Console;
+using static System.Configuration;
 using System;
 
 namespace Topic.Numbering
 {
-    public class DemoDriver
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-        }
+        
     }
 }
