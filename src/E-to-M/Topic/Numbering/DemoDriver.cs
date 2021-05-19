@@ -7,7 +7,7 @@ namespace Topic.Numbering
     {
         public static void Main(string[] args)
         {
-            WriteLine(typeof(DemoDriver).GetType.FullName);
+            WriteLine(typeof(DemoDriver).GetType().FullName);
         }
     }
 }
