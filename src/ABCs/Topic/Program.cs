@@ -16,9 +16,9 @@ namespace Topic
                 Program app = new(args); // Note the new C# 9.0 way to instantiate the class - much cleaner!
                 app.Run();
             }
-            finally
+            finally // This block always runs, whether or not there is an exception. It gives us a place to do any "Clean Up"
             {
-                ResetColor();
+                ResetColor(); // Resetting the color of the Console, so it doesn't look weird afterwards.
             }
         }
         #endregion
