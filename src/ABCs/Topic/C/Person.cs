@@ -16,7 +16,7 @@ namespace Topic.C
             get { return _LastName; }
             set { _LastName = value; }
         }
-        public string Age
+        public int Age
         {
             get { return _Age; }
             set { _Age = value; }
