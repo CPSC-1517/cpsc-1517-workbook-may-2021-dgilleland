@@ -1,5 +1,6 @@
 using System;
 using System.Text.Json.Serialization;
+using Humanizer;
 
 namespace Topic.Banking
 {
@@ -35,7 +36,7 @@ namespace Topic.Banking
             }
         }
 
-        public string AccountType { get { return _AccountType.ToString(); } }
+        public string AccountType { get { return _AccountType.Humanize(); } }
         public string BankName { get; }
         public int BranchNumber { get; }
         public int InstitutionNumber { get; }
@@ -56,7 +57,7 @@ namespace Topic.Banking
 
         #region Constructors
         public Account(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, string accountType)
-            : this(bankName, branchNumber, institutionNumber, accountNumber, balance, overdraftLimit, (AccountType)Enum.Parse(typeof(AccountType), accountType))
+            : this(bankName, branchNumber, institutionNumber, accountNumber, balance, overdraftLimit, accountType.DehumanizeTo<AccountType>())
         {
             // This old constructor's body is now empty
         }

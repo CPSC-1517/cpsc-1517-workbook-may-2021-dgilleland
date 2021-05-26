@@ -6,4 +6,8 @@
     <StartupObject>Topic.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Humanizer.Core" Version="2.10.1" />
+  </ItemGroup>
+
 </Project>
