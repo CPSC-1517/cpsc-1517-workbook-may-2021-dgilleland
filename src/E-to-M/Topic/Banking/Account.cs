@@ -5,14 +5,17 @@ namespace Topic.Banking
 {
     public class Account
     {
+        #region Fields
         public readonly int AccountNumber;
         private double _Balance;
         private double _OverdraftLimit;
+        #endregion
 
+        #region Properties
         public double Balance
         {
             get { return _Balance; }
-            set { _Balance = value; }
+            private set { _Balance = value; }
         }
 
         public double OverdraftLimit
@@ -25,7 +28,9 @@ namespace Topic.Banking
         public string BankName { get; }
         public int BranchNumber { get; }
         public int InstitutionNumber { get; }
-
+        #endregion
+        
+        #region Constructor
         public Account(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, string accountType)
         {
             BankName = bankName;
@@ -36,5 +41,18 @@ namespace Topic.Banking
             OverdraftLimit = overdraftLimit;
             AccountType = accountType;
         }
+        #endregion
+
+        #region Methods
+        public void Withdraw(double amount)
+        {
+            Balance -= amount;
+        }
+
+        public void Deposit(double amount)
+        {
+            Balance += amount;
+        }
+        #endregion
     }
 }
