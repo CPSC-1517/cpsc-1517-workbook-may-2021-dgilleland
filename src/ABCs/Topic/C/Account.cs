@@ -2,7 +2,7 @@ namespace Topic.C
 {
     public class Account
     {
-        private readonly int AccountNumber;
+        public readonly int AccountNumber;
         private double _Balance;
         private double _OverdraftLimit;
 
