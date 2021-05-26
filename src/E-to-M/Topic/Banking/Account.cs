@@ -85,6 +85,8 @@ namespace Topic.Banking
         #region Methods
         public double Withdraw(double amount)
         {
+            if (amount <= 0)
+                throw new Exception("Withdrawal amounts must be greater than zero");
             if (amount != Math.Round(amount, 2))
                 throw new Exception("Withdrawal amounts cannot include fractions of a penny");
             if (amount > Balance + OverdraftLimit)
@@ -99,6 +101,8 @@ namespace Topic.Banking
 
         public void Deposit(double amount)
         {
+            if (amount <= 0)
+                throw new Exception("Deposit amounts must be greater than zero");
             if (amount != Math.Round(amount, 2))
                 throw new Exception("Deposit amounts cannot include fractions of a penny");
             Balance = Math.Round(Balance + amount, 2);
