@@ -21,11 +21,20 @@ namespace Topic.Banking
             set { _OverdraftLimit = value; }
         }
 
-        public Account(int accountNumber, double balance, double overdraftLimit)
+        public string AccountType { get; }
+        public string BankName { get; }
+        public int BranchNumber { get; }
+        public int InstitutionNumber { get; }
+
+        public Account(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, string accountType)
         {
+            BankName = bankName;
+            BranchNumber = branchNumber;
+            InstitutionNumber = institutionNumber;
             AccountNumber = accountNumber;
             Balance = balance;
             OverdraftLimit = overdraftLimit;
+            AccountType = accountType;
         }
     }
 }
