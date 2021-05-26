@@ -28,8 +28,21 @@ namespace Topic.Banking
         public string BankName { get; }
         public int BranchNumber { get; }
         public int InstitutionNumber { get; }
+
+        public bool IsOverdrawn
+        {
+            get
+            {
+                bool overdrawn;
+                if (Balance < 0)
+                    overdrawn = true;
+                else
+                    overdrawn = false;
+                return overdrawn;
+            }
+        }
         #endregion
-        
+
         #region Constructor
         public Account(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, string accountType)
         {
@@ -44,9 +57,13 @@ namespace Topic.Banking
         #endregion
 
         #region Methods
-        public void Withdraw(double amount)
+        public double Withdraw(double amount)
         {
-            Balance -= amount;
+            if (amount <= Balance + OverdraftLimit)
+                Balance = Balance - amount;
+            else
+                amount = 0;
+            return amount;
         }
 
         public void Deposit(double amount)
