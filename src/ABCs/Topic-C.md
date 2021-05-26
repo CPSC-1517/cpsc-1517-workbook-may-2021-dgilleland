@@ -13,9 +13,9 @@ This simple class illustrates and introduces the idea of encapsulation (private 
 ```csharp
 public class Person
 {
-    public string _FirstName
-    public string _LastName
-    public int _Age
+    public string _FirstName;
+    public string _LastName;
+    public int _Age;
 
     public string FirstName
     {
@@ -27,7 +27,7 @@ public class Person
         get { return _LastName; }
         set { _LastName = value; }
     }
-    public string Age
+    public int Age
     {
         get { return _Age; }
         set { _Age = value; }
@@ -95,17 +95,17 @@ public class Student
 
     public string Program
     {
-        get { return ; }
+        get { return _Program; }
         set { _Program = value; }
     }
     public double GradePointAverage
     {
-        get { return ; }
+        get { return _GradePointAverage; }
         set { _GradePointAverage = value; }
     }
     public bool IsFullTime
     {
-        get { return ; }
+        get { return _IsFullTime; }
         set { _IsFullTime = value; }
     }
 
