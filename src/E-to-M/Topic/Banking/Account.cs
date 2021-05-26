@@ -9,6 +9,7 @@ namespace Topic.Banking
         public readonly int AccountNumber;
         private double _Balance;
         private double _OverdraftLimit;
+        private readonly AccountType _AccountType;
         #endregion
 
         #region Properties
@@ -34,7 +35,7 @@ namespace Topic.Banking
             }
         }
 
-        public string AccountType { get; }
+        public string AccountType { get { return _AccountType.ToString(); } }
         public string BankName { get; }
         public int BranchNumber { get; }
         public int InstitutionNumber { get; }
@@ -53,8 +54,14 @@ namespace Topic.Banking
         }
         #endregion
 
-        #region Constructor
+        #region Constructors
         public Account(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, string accountType)
+            : this(bankName, branchNumber, institutionNumber, accountNumber, balance, overdraftLimit, (AccountType)Enum.Parse(typeof(AccountType), accountType))
+        {
+            // This old constructor's body is now empty
+        }
+
+        public Account(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, AccountType accountType)
         {
             // Ensuring a valid state
             if (string.IsNullOrEmpty(bankName) || string.IsNullOrEmpty(bankName.Trim()))
@@ -69,8 +76,6 @@ namespace Topic.Banking
                 throw new Exception("Opening balances cannot include a fraction of a penny");
             if (overdraftLimit != Math.Round(overdraftLimit, 2))
                 throw new Exception("Overdraft limit amounts cannot include a fraction of a penny");
-            if (string.IsNullOrEmpty(accountType) || string.IsNullOrEmpty(accountType.Trim()))
-                throw new Exception("Account type cannot be empty");
 
             BankName = bankName;
             BranchNumber = branchNumber;
@@ -78,7 +83,7 @@ namespace Topic.Banking
             AccountNumber = accountNumber;
             Balance = balance;
             OverdraftLimit = overdraftLimit;
-            AccountType = accountType;
+            _AccountType = accountType;
         }
         #endregion
 
