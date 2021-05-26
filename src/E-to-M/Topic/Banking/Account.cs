@@ -113,6 +113,11 @@ namespace Topic.Banking
                 throw new Exception("Deposit amounts cannot include fractions of a penny");
             Balance = Math.Round(Balance + amount, 2);
         }
+
+        public override string ToString()
+        {
+            return $"{InstitutionNumber}-{BranchNumber}-{AccountNumber}";
+        }
         #endregion
     }
 }
