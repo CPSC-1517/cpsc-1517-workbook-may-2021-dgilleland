@@ -1,5 +1,4 @@
 using System;
-using System.Text.Json.Serialization;
 using Humanizer;
 
 namespace Topic.Banking

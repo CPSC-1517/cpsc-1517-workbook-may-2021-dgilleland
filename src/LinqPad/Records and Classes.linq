@@ -33,6 +33,9 @@ string CheckObjectReferenceEquals(Person firstObject, Person secondObject)
 }
 
 // You can define other methods, fields, classes and namespaces here
+// The record keyword is new in C# 9. It was introduced to give us something that was
+// like a class but would be immutable like strings are immutable. Another thing we get
+// is automatic comparison of the objects using Value semantics.
 public record Person(string Name, int Age);
 public class Student
 {

@@ -222,7 +222,7 @@ First, modify the `SecretNumber` class by adding a method to guess with a hint.
 ```csharp
 public enum Hint{ CORRECT, GUESS_HIGHER, GUESS_LOWER}
 
-public bool GuessWithHint(int myBestGuess)
+public Hint GuessWithHint(int myBestGuess)
 {
     return TheSecretNumber == myBestGuess ? Hint.CORRECT 
          : TheSecretNumber < myBestGuess ? Hint:GUESS_HIGHER : Hint.GUESS_LOWER;

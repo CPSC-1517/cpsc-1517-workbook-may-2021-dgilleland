@@ -208,7 +208,7 @@ In order to meet these requirements, the following changes need to be made to th
 public double Balance
 {
     get { return _Balance; }
-    set {
+    private set {
         if (value < -OverdraftLimit)
             throw new Exception("Negative balances cannot exceed the Overdraft Limit");
         _Balance = value;
@@ -355,7 +355,7 @@ To reduce the presence of duplicate code, we will "chain" the old constructor to
 
 ```csharp
 public Account(string bankName, int branchNumber, int institutionNumber, int accountNumber, double balance, double overdraftLimit, string accountType)
-    : this(bankName, branchNumber, institutionNumber, accountNumber, balance, overdraftLimit, (AccountType)Enum.Parse(typeof(AccountType), accountType))
+    : this(bankName, branchNumber, institutionNumber, accountNumber, balance, overdraftLimit, (AccountType)Enum.Parse(typeof(AccountType)))
 {
     // This old constructor's body is now empty
 }
@@ -366,7 +366,7 @@ If someone tries using the old constructor with valid values, everything will be
 Lastly, we would re-write the `AccountType` property to return the string representation of the read-only property.
 
 ```csharp
-public string AccountType { get { return _AccountType.ToString(); }}
+public string AccountType { get { return _AccountType.ToString(); } }
 ```
 
 > #### Introducing Humanizer
