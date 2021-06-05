@@ -8,6 +8,17 @@ namespace Sandbox.File_IO
         public double PossibleMarks { get; set; }
         public double EarnedMarks { get; set; }
 
+        public double? Percent
+        {
+            get
+            {
+                double? result = null;
+                if(PossibleMarks > 0)
+                    result = EarnedMarks / PossibleMarks;
+                return result;
+            }
+        }
+
         public Assignment(string name, string evaluationGroupName, double weight, double possibleMarks = 0, double earnedMarks = 0)
         {
             Name = name;
@@ -15,6 +26,12 @@ namespace Sandbox.File_IO
             Weight = weight;
             PossibleMarks = possibleMarks;
             EarnedMarks = earnedMarks;
+        }
+
+        public void RecordGrade(double earned, double possible)
+        {
+            PossibleMarks = possible;
+            EarnedMarks = earned;
         }
 
         public override string ToString()

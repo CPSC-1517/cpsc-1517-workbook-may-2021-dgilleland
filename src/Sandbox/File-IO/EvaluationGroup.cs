@@ -6,5 +6,27 @@ namespace Sandbox.File_IO
     {
         public string Name { get; }
         public List<Assignment> Assignments {get;}
+        public double GroupWeight
+        {
+            get
+            {
+                double total = 0;
+                foreach(var item in Assignments)
+                    total += item.Weight;
+                return total;
+            }
+        }
+
+        public bool IsMarked
+        { get { return Assignments.TrueForAll(AssignmentIsMarked); } }
+
+        private bool AssignmentIsMarked(Assignment assignment)
+        { return assignment.Percent.HasValue; }
+
+        public EvaluationGroup(string name)
+        {
+            Name = name;
+            Assignments = new List<Assignment>(); // Create an empty list
+        }
     }
 }

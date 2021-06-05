@@ -15,7 +15,7 @@ namespace Sandbox.File_IO
             return 0;
         }
 
-        // private List<EvaluationGroup> EvaluationGroups = new List<EvaluationGroup>();
+        private List<EvaluationGroup> EvaluationGroups = new List<EvaluationGroup>();
 
         private void TempDemo()
         {
