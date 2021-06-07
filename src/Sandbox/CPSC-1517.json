@@ -1,0 +1,172 @@
+{
+  "EvaluationGroups": [
+    {
+      "Name": "Take-Home Exercises",
+      "Assignments": [
+        {
+          "Name": "Exercise 01",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 9,
+          "EarnedMarks": 0,
+          "Percent": 0
+        },
+        {
+          "Name": "Exercise 02",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 10,
+          "EarnedMarks": 0,
+          "Percent": 0
+        },
+        {
+          "Name": "Exercise 03",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Exercise 04",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Exercise 05",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Exercise 06",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Exercise 07",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Exercise 08",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Exercise 09",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Exercise 10",
+          "EvaluationGroupName": "Take-Home Exercises",
+          "Weight": 2,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        }
+      ],
+      "GroupWeight": 20,
+      "IsMarked": false
+    },
+    {
+      "Name": "In-Class Assessments",
+      "Assignments": [
+        {
+          "Name": "In-Class 1",
+          "EvaluationGroupName": "In-Class Assessments",
+          "Weight": 10,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "In-Class 2",
+          "EvaluationGroupName": "In-Class Assessments",
+          "Weight": 15,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "In-Class 3",
+          "EvaluationGroupName": "In-Class Assessments",
+          "Weight": 10,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "In-Class 4",
+          "EvaluationGroupName": "In-Class Assessments",
+          "Weight": 10,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        }
+      ],
+      "GroupWeight": 45,
+      "IsMarked": false
+    },
+    {
+      "Name": "Project",
+      "Assignments": [
+        {
+          "Name": "Deliverable 1",
+          "EvaluationGroupName": "Project",
+          "Weight": 5,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Deliverable 2",
+          "EvaluationGroupName": "Project",
+          "Weight": 5,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Deliverable 2",
+          "EvaluationGroupName": "Project",
+          "Weight": 10,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        },
+        {
+          "Name": "Deliverable 2",
+          "EvaluationGroupName": "Project",
+          "Weight": 15,
+          "PossibleMarks": 0,
+          "EarnedMarks": 0,
+          "Percent": null
+        }
+      ],
+      "GroupWeight": 35,
+      "IsMarked": false
+    }
+  ],
+  "TotalWeight": 100,
+  "CourseNumber": "CPSC-1517",
+  "CourseName": "Introduction to Application Development"
+}

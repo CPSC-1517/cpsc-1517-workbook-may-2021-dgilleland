@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Sandbox.File_IO
@@ -27,6 +28,13 @@ namespace Sandbox.File_IO
         {
             Name = name;
             Assignments = new List<Assignment>(); // Create an empty list
+        }
+
+        internal void Add(Assignment assignment)
+        {
+            if(assignment == null)
+                throw new ArgumentNullException(nameof(assignment), "Cannot add a null assignment to the group");
+            Assignments.Add(assignment);
         }
     }
 }
