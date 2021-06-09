@@ -30,7 +30,7 @@ namespace Sandbox.File_IO
             Assignments = new List<Assignment>(); // Create an empty list
         }
 
-        internal void Add(Assignment assignment)
+        public void Add(Assignment assignment)
         {
             if(assignment == null)
                 throw new ArgumentNullException(nameof(assignment), "Cannot add a null assignment to the group");
