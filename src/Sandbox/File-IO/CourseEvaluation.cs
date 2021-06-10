@@ -12,7 +12,7 @@ namespace Sandbox.File_IO
         [JsonInclude]
         public readonly string CourseName;
 
-        public List<EvaluationGroup> EvaluationGroups { get; private set;}
+        public List<EvaluationGroup> EvaluationGroups { get; set;}
         
         public double TotalWeight
         {

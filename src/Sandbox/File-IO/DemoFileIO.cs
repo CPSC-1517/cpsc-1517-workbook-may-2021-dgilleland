@@ -20,8 +20,22 @@ namespace Sandbox.File_IO
 
         private void Run()
         {
-            CreateCourseDataFromFile();
-            LoadCourseDataFromJson();
+            WriteLine("A) Create Course Data as JSON file after loading from CSV File");
+            WriteLine("B) Load data from JSON file");
+            Write("Select an option: ");
+            string userInput = ReadLine();
+            switch(userInput)
+            {
+                case "A":
+                    CreateCourseDataFromFile();
+                    break;
+                case "B":
+                    LoadCourseDataFromJson();
+                    break;
+                default:
+                    WriteLine("Unknown input.");
+                    break;
+            }
         }
 
         private void LoadCourseDataFromJson()

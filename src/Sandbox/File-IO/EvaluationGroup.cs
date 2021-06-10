@@ -6,7 +6,7 @@ namespace Sandbox.File_IO
     public class EvaluationGroup
     {
         public string Name { get; }
-        public List<Assignment> Assignments {get;}
+        public List<Assignment> Assignments {get;set;}
         public double GroupWeight
         {
             get
