@@ -7,11 +7,18 @@ namespace SimpleDatabase.Services
 {
     public class ResumeService
     {
+        #region Constructor and Private Fields
+        // This field/constructor represent some good OOP design
+        // in the sense that our "service" has a dependency on another class/object
         private readonly MySimpleDatabaseContext _context;
+        // Having a constructor where I expect that dependent item/object to be passed in
+        // is known as Constructor Injection for Dependency Injection.
         public ResumeService(MySimpleDatabaseContext context)
         {
+            // ?? is the "null-coalescing operator"
             _context = context ?? throw new ArgumentNullException(nameof(context), "A database context is required for this service");
         }
+        #endregion
 
         public System.Collections.Generic.List<Resume> ListAllResumes()
         {
