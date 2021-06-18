@@ -1,5 +1,7 @@
 using System;
+using System.Linq;
 using SimpleDatabase.DAL;
+using SimpleDatabase.Entities;
 
 namespace SimpleDatabase.Services
 {
@@ -9,6 +11,18 @@ namespace SimpleDatabase.Services
         public ResumeService(MySimpleDatabaseContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context), "A database context is required for this service");
+        }
+
+        public System.Collections.Generic.List<Resume> ListAllResumes()
+        {
+            var result = _context.Resumes;
+            return result.ToList();
+        }
+
+        public void Add(Resume resume)
+        {
+            _context.Resumes.Add(resume);
+            _context.SaveChanges();
         }
 
         #region Not what we typically will use....
