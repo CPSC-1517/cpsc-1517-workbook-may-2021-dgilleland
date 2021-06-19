@@ -37,6 +37,7 @@ namespace SimpleDatabase
             AdHoc();
             // using a dependency injection container to get the service object
             var myService = _container.GetInstance<ResumeService>();
+            myService.CreateDatabaseIfNotExists();
             // Get the data from the database
             var existingResumes = myService.ListAllResumes(); // get it from whereever
             Display(existingResumes);

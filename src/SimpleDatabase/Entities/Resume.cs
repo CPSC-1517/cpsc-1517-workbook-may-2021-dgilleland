@@ -1,4 +1,5 @@
 using System; // because of needing DateTime
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SimpleDatabase.Entities
 {
@@ -10,5 +11,14 @@ namespace SimpleDatabase.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
+
+        [NotMapped] // Tells EF NOT to expect a column called FullName on the table
+        public string FullName
+        {
+            get
+            {
+                return $"{FirstName} {LastName}";
+            }
+        }
     }
 }
