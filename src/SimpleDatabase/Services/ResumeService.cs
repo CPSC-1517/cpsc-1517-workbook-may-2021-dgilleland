@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using SimpleDatabase.DAL;
 using SimpleDatabase.Entities;
 
@@ -20,10 +22,10 @@ namespace SimpleDatabase.Services
         }
         #endregion
 
-        public System.Collections.Generic.List<Resume> ListAllResumes()
+        public List<Resume> ListAllResumes()
         {
-            var result = _context.Resumes;
-            return result.ToList();
+            DbSet<Resume> result = _context.Resumes;
+            return result.ToList(); // Using the extension method to convert a DbSet<T> to List<T>
         }
 
         public void Add(Resume resume)

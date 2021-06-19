@@ -34,13 +34,27 @@ namespace SimpleDatabase
         #region App Driver
         private void Run()
         {
+            AdHoc();
+            // using a dependency injection container to get the service object
             var myService = _container.GetInstance<ResumeService>();
-            var existingResumes = myService.ListAllResumes();
+            // Get the data from the database
+            var existingResumes = myService.ListAllResumes(); // get it from whereever
             Display(existingResumes);
 
             var myResume = CreateNewResume();
-            myService.Add(myResume);
+            myService.Add(myResume); // put it whereever
         }
+
+        private void AdHoc()
+        {
+            using(var context = _container.GetInstance<WestWindContext>())
+            {
+                var items = context.Items;
+                foreach(var row in items)
+                    WriteLine(row.Name);
+            }
+        }
+
 
         private void Display(List<Resume> data)
         {
@@ -100,7 +114,21 @@ namespace SimpleDatabase
             _configuration = builder.Build();
 
             // Register different services
+            // Registering my database objects for DI Container
             _container.Register<MySimpleDatabaseContext>(_CreateSimpleDatabaseContext);
+            _container.Register<WestWindContext>(_CreateWestWindContext);
+        }
+
+        private WestWindContext _CreateWestWindContext()
+        {
+            string conn = _configuration.GetConnectionString("WWDb");
+            // Setup my database connection options
+            DbContextOptionsBuilder<WestWindContext> optionsBuilder;
+            optionsBuilder = new(); // Instantiate a "builder"
+            optionsBuilder.UseSqlServer<WestWindContext>(conn);
+            var options = optionsBuilder.Options;
+
+            return new WestWindContext(options); // creates my DAL class
         }
 
         private MySimpleDatabaseContext _CreateSimpleDatabaseContext()
@@ -112,7 +140,7 @@ namespace SimpleDatabase
             optionsBuilder.UseSqlServer<MySimpleDatabaseContext>(conn);
             var options = optionsBuilder.Options;
 
-            return new MySimpleDatabaseContext(options);
+            return new MySimpleDatabaseContext(options); // creates my DAL class
         }
         #endregion
     }
