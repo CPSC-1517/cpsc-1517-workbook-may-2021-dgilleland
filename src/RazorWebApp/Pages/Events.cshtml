@@ -1,0 +1,13 @@
+@page
+@model EventsModel
+
+<h1>Upcoming Events</h1>
+
+<p>Fill out the following form to tell us information about your upcoming event. @Model.FeedbackMessage</p>
+
+<form method="POST">
+    <label>Title
+        <input type="text" placeholder="Event Title" asp-for="EventTitle" />
+    </label>
+    <button type="submit">Post Details</button>
+</form>
