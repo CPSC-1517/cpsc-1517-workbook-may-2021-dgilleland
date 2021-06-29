@@ -20,7 +20,6 @@
 - Another Database Demo
 - In-Class #1 and Exercise #2 Review
 - In-Class #2 Announcement
--->
 
 ## Monday
 
@@ -58,3 +57,21 @@
 ## **Next** Wednesday
 
 ## **Next** Friday
+-->
+
+## Monday (June 28)
+
+- Understand your **Web Host Environment**
+- Finish Event Form sample
+  - Use an `UpcomingEvent` class for binding
+- Creating Razor Pages
+  - `dotnet new page -n PageName -o Pages`
+- HTML 5 Form Elements
+  - Functional User Elements:
+    - `<form>`, `<input>` (and `<datalist>`), `<select>`/`<option>`, `<textarea>`, `<button>`
+  - Semantic (*the meaning of the content*) Form Elements:
+    - `<label>`, `<output>` ,`<fieldset>`, `<legend>`
+  - Common attributes: `name`, `value`
+  - Validation attributes: `required`, *etc.*
+- LibMan and awsm.css
+
