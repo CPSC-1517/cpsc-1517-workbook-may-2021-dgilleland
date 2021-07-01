@@ -9,12 +9,34 @@
 
 <h2>&lt;Input&gt; Tag</h2>
 
+<p><b>@Model.BuddyName</b></p>
+<form method="post">
+    <input type="text" list="currentNames" asp-for="BuddyName" placeholder="Pick a Coding Buddy" />
+    <datalist id="currentNames">
+        <option>Dan Gilleland</option>
+        <option>Don Welch</option>
+        <option>Robbin Law</option>
+        <option>Shane Bell</option>
+        <option>Sam Wu</option>
+    </datalist>
+    <!-- You can use an input element as a button -->
+    <input type="submit" value="Choose Partner" />
+</form>
 
 <h2>&lt;TextArea&gt; Tag</h2>
 
 
 <h2>&lt;Select&gt; Tag</h2>
-
+<p>I see you like "@Model.Flavour" ice cream.</p>
+<form method="post">
+    <select asp-for="Flavour">
+        <option value="">[Select a favorite]</option>
+        <option>Vanilla</option>
+        <option>Chocolate</option>
+        <option>Neopolitan</option>
+    </select>
+    <button type="submit">Pick Ice Cream Flavour</button>
+</form>
 
 <h2>&lt;Button&gt; Tag</h2>
 

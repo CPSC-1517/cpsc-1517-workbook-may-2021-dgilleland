@@ -57,7 +57,6 @@
 ## **Next** Wednesday
 
 ## **Next** Friday
--->
 
 ## Monday (June 28)
 
@@ -66,6 +65,16 @@
   - Use an `UpcomingEvent` class for binding
 - Creating Razor Pages
   - `dotnet new page -n PageName -o Pages`
+
+-->
+
+## Wednesday (June 30)
+
+- Homework
+  - **CPSC-1517.github.io** Readings:
+    - [HTML Articles](https://cpsc-1517.github.io/html/)
+    - [Razor](https://cpsc-1517.github.io/razor/)
+- LibMan and awsm.css
 - HTML 5 Form Elements
   - Functional User Elements:
     - `<form>`, `<input>` (and `<datalist>`), `<select>`/`<option>`, `<textarea>`, `<button>`
@@ -73,5 +82,11 @@
     - `<label>`, `<output>` ,`<fieldset>`, `<legend>`
   - Common attributes: `name`, `value`
   - Validation attributes: `required`, *etc.*
-- LibMan and awsm.css
+- Peeking at Form Request Values
+  - The first **`T`** in *HTTP*
+  - The `name` and `value` attributes
+  - Sending via **`GET`** vs **`POST`**
 
+## Friday
+
+- Client-Server Setup
