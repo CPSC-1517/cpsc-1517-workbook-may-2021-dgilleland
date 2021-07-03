@@ -89,4 +89,50 @@
 
 ## Friday
 
-- Client-Server Setup
+- **Client-Server**
+  - [Tiers and Layers](https://cpsc-1517.github.io/clientserver/)
+  - Create a) web application, b) class library and c) solution - [*(see demo)*](#client-server-setup-demo)
+  - Understanding the "App" as the "domain"
+    - BLL, DAL, Entities
+  - Understanding the "Web" as the "UI"
+- **Registering Services** in `Startup.cs`
+
+
+## Next Week...
+
+- Uploading Files
+- Displaying Tabular Data
+  - From Database
+  - Searching/Filtering
+- CRUD Applications
+  - Page Handlers for Posting
+
+## Next Week...
+
+- Validating User Input
+
+----
+
+## Appendix
+
+### Client-Server Setup Demo
+
+In this demo, there will be two projects. A Web project (`WebApp.csproj`) and a Class Library (`WestWind.csproj`).
+
+Additionally, there will be a solution file (`WestWindDemo.sln`) referencing both projects (*not entirely needed when working in VS-Code, but required for working in VS-2019*).
+    
+```ps
+# Switch to src/ folder
+cd src
+# Create a Razor Pages Web Application
+dotnet new webapp -n WebApp -o WestWind.Web
+# Create a Class Library
+dotnet new classlib -n WestWind -o WestWind.App
+# Create a Solution (solutions can hold multiple projects)
+dotnet new sln -n WestWindDemo
+# Add the two projects to the solution (starting with the Web App)
+dotnet sln add WestWind.Web/WebApp.csproj
+dotnet sln add WestWind.App/WestWind.csproj
+# Allow the WebApp to use the WestWind project
+dotnet add WestWind.Web/WebApp.csproj reference WestWind.App/WestWind.csproj
+```
