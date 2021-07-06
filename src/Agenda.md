@@ -115,13 +115,38 @@
     - `[BindProperty] public IFormFile PropertyName { get; set; }`
     - Processing: Save to a location within the web application
 
-## This Week...
+## Wednesday (July 7)
+
+> ### View Products
+>
+> <input placeholder="Partial Name" /> <button>Filter Results</button>
+>
+> | Name ▲ | Quantity Per Unit | Unit Price |
+> |------|-------------------|------------|
+> | Alice Mutton | 20 - 1 kg tins | $ 39.00 |
+> | Aniseed Syrup | 12 - 550 ml bottles | $ 10.00 |
+> | Boston Crab Meat | 24 - 4 oz tins | $ 18.40 |
+> | ... | ... | ... |
 
 - Displaying Tabular Data
   - From Database
-  - Searching/Filtering
+    - `Product` entity for *Products* table
+    - `WestWindContext.Products` property
+  - New Razor Page - `ViewProducts`
+    - Pagination - 10 per page
+    - Searching/Filtering (by partial product name)
+    - Sorting
+  - Practice: `ViewCustomers`
+    - Display `CompanyName`, `ContactName`, `ContactTitle`, `ContactEmail`
+
+## Friday (July 9)
+
 - CRUD Applications
-  - Page Handlers for Posting
+  - Edit Page for `Product` (`ProductEditor.cshtml`)
+    - `Supplier` and `Category` Entities for drop-downs
+  - **Add** and **Edit** Links from tabular page
+  - BLL Methods to Add/Update/Delete per-table
+  - Page Handlers for Add/Update/Delete
 
 ## Next Week...
 
