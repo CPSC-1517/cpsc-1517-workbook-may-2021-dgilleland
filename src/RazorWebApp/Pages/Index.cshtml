@@ -7,6 +7,13 @@
 <h1>Welcome</h1>
 <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 
+<form method="POST" enctype="multipart/form-data">
+    <label>Choose CSV File</label>
+    <input type="file" accept=".csv" asp-for="UserFile" />
+
+    <button type="submit">Upload</button>
+</form>
+
 <blockquote>
     @Model.Announcement
 </blockquote>
