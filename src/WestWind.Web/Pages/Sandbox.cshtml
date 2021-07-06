@@ -2,3 +2,19 @@
 @model MyApp.Namespace.SandboxModel
 @{
 }
+
+<h1>List of Shippers</h1>
+
+<table class="table table-hover">
+    <tr>
+        <th>Phone</th>
+        <th>Company Name</th>
+    </tr>
+    @foreach(var shippingCompany in Model.Shippers)
+    {
+        <tr>
+            <td>@shippingCompany.Phone</td>
+            <td>@shippingCompany.CompanyName</td>
+        </tr>
+    }
+</table>

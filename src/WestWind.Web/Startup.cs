@@ -5,9 +5,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore; // Has the extension for the .UseSqlServer()
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using WestWind.App.BLL; // Contains the TempService class
+using WestWind.App.DAL; // Has the DbContext class of WestWindContext
 
 namespace WebApp
 {
@@ -24,6 +27,11 @@ namespace WebApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddRazorPages();
+            services.AddDbContext<WestWindContext>(context =>
+                context.UseSqlServer(Configuration.GetConnectionString("WWdb")));
+            // Our BLL Services will be registered as "transient" services.
+            // A "transient" service will regenerate the object each time it is required.
+            services.AddTransient<TempService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

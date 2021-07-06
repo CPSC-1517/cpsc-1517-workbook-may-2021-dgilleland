@@ -66,8 +66,6 @@
 - Creating Razor Pages
   - `dotnet new page -n PageName -o Pages`
 
--->
-
 ## Wednesday (June 30)
 
 - Homework
@@ -97,10 +95,28 @@
   - Understanding the "Web" as the "UI"
 - **Registering Services** in `Startup.cs`
 
+-->
 
-## Next Week...
+## Monday (July 5)
 
+- Follow-up of Friday's class (Database and Services Hookups)
+  - **Registering Services** in `Startup.cs`
+  - Adjusting `appsettings.json`
 - Uploading Files
+  - Deciding what kinds of files you want to upload (csv, images, etc)
+    - [CSV File Generator](https://extendsclass.com/csv-generator.html)
+    - [AI Generated Photos](https://generated.photos)
+  - Deciding what to do with the uploaded file(s)
+    - Save to disk (`Directory` and `File` classes)
+  - HTML Side
+    - `<form method="post" enctype="multipart/form-data">`
+    - `<input type="file" accept=".csv">` + `asp-for="PropertyName"`
+  - C# Side
+    - `[BindProperty] public IFormFile PropertyName { get; set; }`
+    - Processing: Save to a location within the web application
+
+## This Week...
+
 - Displaying Tabular Data
   - From Database
   - Searching/Filtering
@@ -135,4 +151,25 @@ dotnet sln add WestWind.Web/WebApp.csproj
 dotnet sln add WestWind.App/WestWind.csproj
 # Allow the WebApp to use the WestWind project
 dotnet add WestWind.Web/WebApp.csproj reference WestWind.App/WestWind.csproj
+```
+
+### Configuring Services
+
+The **database context** service is configured in the [**`ConfigureServices`**](https://docs.microsoft.com/en-us/ef/core/dbcontext-configuration/#dbcontext-in-dependency-injection-for-aspnet-core) method of the `Startup.cs` class.
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<ApplicationDbContext>(
+        options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+}
+```
+
+Other BLL services can be added as *Transient* services (these are created each time they are requested).
+
+```csharp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddTransient<TService>();
+}
 ```
