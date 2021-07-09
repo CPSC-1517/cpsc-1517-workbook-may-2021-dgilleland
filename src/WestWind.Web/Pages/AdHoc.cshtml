@@ -5,10 +5,17 @@
 
 <h1><a asp-page="/AdHoc">Pagination Trials</a></h1>
 
-<p>You are on page # <b>@Model.Current</b> showing items @Model.FromItem to @Model.ToItem</p>
+<p>There are @Model.TotalResults results for this page. You are on page # <b>@Model.Current</b> of <i>@Model.PageCount</i> pages, showing items @Model.FromItem to @Model.ToItem</p>
 
-<a asp-page="/AdHoc" asp-route-currentpage="1">1</a>
-<a asp-page="/AdHoc" asp-route-currentpage="2">2</a>
-<a asp-page="/AdHoc" asp-route-currentpage="3">3</a>
-<a asp-page="/AdHoc" asp-route-currentpage="4">4</a>
-<a asp-page="/AdHoc" asp-route-currentpage="@(Model.Current + 1)">&gt;</a>
+<a title="First Page" asp-page="/AdHoc" asp-route-currentpage="@Model.FirstPage">&laquo;</a>
+<a title="Previous Page" asp-page="/AdHoc" asp-route-currentpage="@Model.PreviousPage">&lsaquo;</a>
+
+@{
+    for(var counter = 1; counter <= Model.PageCount; counter++)
+    {
+        <a asp-page="/AdHoc" asp-route-currentpage="@counter">@counter</a>
+    }
+}
+
+<a title="Next Page" asp-page="/AdHoc" asp-route-currentpage="@Model.NextPage">&rsaquo;</a>
+<a title="Last Page" asp-page="/AdHoc" asp-route-currentpage="@Model.LastPage">&raquo;</a>
