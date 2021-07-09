@@ -1,0 +1,25 @@
+﻿@page
+@model ViewProductCatalogModel
+@{
+}
+
+<h1>Product Catalog</h1>
+
+<table class="table table-hover">
+    <tr>
+        <td>Name</td>
+        <td>Quantity Per Unit</td>
+        <td>Price</td>
+    </tr>
+    @{
+        // Loop through the products to create each row
+        foreach(var item in Model.Catalog)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.QuantityPerUnit</td>
+                <td>@item.UnitPrice.ToString("C")</td>
+            </tr>
+        }
+    }
+</table>

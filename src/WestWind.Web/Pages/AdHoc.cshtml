@@ -1,0 +1,14 @@
+﻿@page
+@model AdHocModel
+@{
+}
+
+<h1><a asp-page="/AdHoc">Pagination Trials</a></h1>
+
+<p>You are on page # <b>@Model.Current</b> showing items @Model.FromItem to @Model.ToItem</p>
+
+<a asp-page="/AdHoc" asp-route-currentpage="1">1</a>
+<a asp-page="/AdHoc" asp-route-currentpage="2">2</a>
+<a asp-page="/AdHoc" asp-route-currentpage="3">3</a>
+<a asp-page="/AdHoc" asp-route-currentpage="4">4</a>
+<a asp-page="/AdHoc" asp-route-currentpage="@(Model.Current + 1)">&gt;</a>

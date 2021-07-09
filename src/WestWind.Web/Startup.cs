@@ -32,6 +32,7 @@ namespace WebApp
             // Our BLL Services will be registered as "transient" services.
             // A "transient" service will regenerate the object each time it is required.
             services.AddTransient<TempService>();
+            services.AddTransient<ProductInventoryService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
