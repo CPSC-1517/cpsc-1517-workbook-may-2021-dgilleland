@@ -1,21 +1,31 @@
 ﻿@page
 @model AdHocModel
 @{
+    var Paging = Model.Paging;
 }
 
 <h1><a asp-page="/AdHoc">Pagination Trials</a></h1>
 
-<p>There are @Model.TotalResults results for this page. You are on page # <b>@Model.Current</b> of <i>@Model.PageCount</i> pages, showing items @Model.FromItem to @Model.ToItem</p>
+<p>There are @Paging.TotalResults results for this page. You are on page # <b>@Paging.Current</b> of <i>@Paging.PageCount</i> pages, showing items @Paging.FromItem to @Paging.ToItem</p>
 
-<a title="First Page" asp-page="/AdHoc" asp-route-currentpage="@Model.FirstPage">&laquo;</a>
-<a title="Previous Page" asp-page="/AdHoc" asp-route-currentpage="@Model.PreviousPage">&lsaquo;</a>
+<code>@Paging.LastPageLink</code>
+<br/>
+<a title="First Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.FirstPage">&laquo;</a>
+<a title="Previous Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.PreviousPage">&lsaquo;</a>
 
 @{
-    for(var counter = 1; counter <= Model.PageCount; counter++)
+    for(var counter = Paging.FirstPageLink; counter <= Paging.LastPageLink; counter++)
     {
+        if(counter == Paging.Current)
+        {
+            <b>@counter</b>
+        }
+        else
+        {
         <a asp-page="/AdHoc" asp-route-currentpage="@counter">@counter</a>
+        }
     }
 }
 
-<a title="Next Page" asp-page="/AdHoc" asp-route-currentpage="@Model.NextPage">&rsaquo;</a>
-<a title="Last Page" asp-page="/AdHoc" asp-route-currentpage="@Model.LastPage">&raquo;</a>
+<a title="Next Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.NextPage">&rsaquo;</a>
+<a title="Last Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.LastPage">&raquo;</a>
