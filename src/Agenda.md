@@ -132,24 +132,50 @@
   - From Database
     - `Product` entity for *Products* table
     - `WestWindContext.Products` property
-  - New Razor Page - `ViewProducts`
+  - New Razor Page - `ViewProductCatalog`
+    - Start with listing all products
     - Pagination - 10 per page
+      - **Q)** - What logic do we need for tracking pagination?
+      - **I)** - How do other sites do it? (like [**Memory Express**](https://memoryexpress.com))
+      > **Side-Note**
+      >
+      > - You don't need a list to play with pagination
+      > - Distinguishing between `GET` and `POST` requests: Hyperlinks and Form Submissions
+      > - Learning about [Tag Helpers](https://docs.microsoft.com/en-us/aspnet/core/mvc/views/tag-helpers/built-in/?view=aspnetcore-5.0)
+
+## Friday (July 9)
+
+- Displaying Tabular Data
+  - New Razor Page - `ViewProductCatalog`
+    - **Questions** from last class...
+    - Pagination - *cont*
+      - Total number of search results
+      - Total number of pages
+      - Max Page Links (5, 7, 10)
+      - Next/Previous
+        - [&lsaquo;](https://www.toptal.com/designers/htmlarrows/punctuation/single-left-pointing-angle-quotation-mark/) `&lsaquo;`
+        - [&rsaquo;](https://www.toptal.com/designers/htmlarrows/punctuation/single-right-pointing-angle-quotation-mark/) `&rsaquo;`
+        - [&laquo;](https://www.toptal.com/designers/htmlarrows/punctuation/double-left-pointing-angle-quotation-mark/) `&laquo;`
+        - [&raquo;](https://www.toptal.com/designers/htmlarrows/punctuation/double-right-pointing-angle-quotation-mark/) `&raquo;`
+      - **Object**ifying Pagination
+
+## Next Week...
+
+- Displaying Tabular Data
+  - New Razor Page - `ViewProductCatalog`
+    - **Questions** from last class...
+    - Pagination - *cont*
+      - **Why** pagination on the **database side** is the **better way**
     - Searching/Filtering (by partial product name)
     - Sorting
   - Practice: `ViewCustomers`
     - Display `CompanyName`, `ContactName`, `ContactTitle`, `ContactEmail`
-
-## Friday (July 9)
-
 - CRUD Applications
   - Edit Page for `Product` (`ProductEditor.cshtml`)
     - `Supplier` and `Category` Entities for drop-downs
   - **Add** and **Edit** Links from tabular page
   - BLL Methods to Add/Update/Delete per-table
   - Page Handlers for Add/Update/Delete
-
-## Next Week...
-
 - Validating User Input
 
 ----
