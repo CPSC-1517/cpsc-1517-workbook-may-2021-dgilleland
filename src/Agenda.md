@@ -95,8 +95,6 @@
   - Understanding the "Web" as the "UI"
 - **Registering Services** in `Startup.cs`
 
--->
-
 ## Monday (July 5)
 
 - Follow-up of Friday's class (Database and Services Hookups)
@@ -159,11 +157,16 @@
         - [&raquo;](https://www.toptal.com/designers/htmlarrows/punctuation/double-right-pointing-angle-quotation-mark/) `&raquo;`
       - **Object**ifying Pagination
 
-## Next Week...
+-->
+
+## Monday (July 12)
 
 - Displaying Tabular Data
   - New Razor Page - `ViewProductCatalog`
     - **Questions** from last class...
+      - Understanding the `Directory` and `Path` classes in `System.IO`
+      - Programmatically renaming files
+      - Review `IFormFile`
     - Pagination - *cont*
       - **Why** pagination on the **database side** is the **better way**
     - Searching/Filtering (by partial product name)

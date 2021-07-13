@@ -4,7 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using WebApp.Helpers; // for Paginator class
 using WestWind.App.BLL;
+using WestWind.App.Collections;
 using WestWind.App.Entities;
 
 namespace WebApp.Pages
@@ -17,11 +19,15 @@ namespace WebApp.Pages
             _service = service ?? throw new ArgumentNullException();
         }
 
-        public List<Product> Catalog {get;set;}
+        public PartialList<Product> Catalog {get;set;}
+        public Paginator Paging {get;set;}
 
         public void OnGet()
         {
-            Catalog = _service.GetProducts();
+            int pageIndex = 0;
+            int pageSize = 10;
+            Catalog = _service.GetProducts(pageIndex * pageSize, pageSize);
+            Paging = new(Catalog.TotalCount);
         }
     }
 }

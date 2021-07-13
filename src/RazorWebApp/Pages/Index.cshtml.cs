@@ -30,6 +30,14 @@ namespace RazorWebApp.Pages
         [BindProperty]
         public IFormFile UserFile { get; set; }
 
+        public string[] Folders {get;set;} = new string[0];
+        public void OnPostShow()
+        {
+            // A post method acting as a specific "page handler"
+            Folders = System.IO.Directory.GetDirectories(ContentRootPath);
+            
+        }
+
         public void OnPost()
         {
             // if there is a UserFile (not null)...
