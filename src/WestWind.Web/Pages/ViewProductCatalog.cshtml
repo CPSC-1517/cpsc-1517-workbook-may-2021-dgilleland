@@ -26,10 +26,10 @@
     <tfoot>
         <tr>
             <td colspan="3">
-                @* Paste my work from AdHoc *@
+                @* Paste my work from ViewProductCatalog *@
 @if(Paging.FirstPageLink != Paging.FirstPage){
-    <a title="First Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.FirstPage">&laquo;</a>
-    <a title="Previous Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.PreviousPage">&lsaquo;</a>
+    <a title="First Page" asp-page="/ViewProductCatalog" asp-route-currentpage="@Paging.FirstPage">&laquo;</a>
+    <a title="Previous Page" asp-page="/ViewProductCatalog" asp-route-currentpage="@Paging.PreviousPage">&lsaquo;</a>
 }
 @{
     for(var counter = Paging.FirstPageLink; counter <= Paging.LastPageLink; counter++)
@@ -40,13 +40,13 @@
         }
         else
         {
-        <a asp-page="/AdHoc" asp-route-currentpage="@counter">@counter</a>
+        <a asp-page="/ViewProductCatalog" asp-route-currentpage="@counter">@counter</a>
         }
     }
 }
 @if(Paging.LastPageLink != Paging.LastPage) {
-    <a title="Next Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.NextPage">&rsaquo;</a>
-    <a title="Last Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.LastPage">&raquo;</a>
+    <a title="Next Page" asp-page="/ViewProductCatalog" asp-route-currentpage="@Paging.NextPage">&rsaquo;</a>
+    <a title="Last Page" asp-page="/ViewProductCatalog" asp-route-currentpage="@Paging.LastPage">&raquo;</a>
 }                
             </td>
         </tr>

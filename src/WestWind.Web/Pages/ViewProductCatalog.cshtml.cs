@@ -22,12 +22,14 @@ namespace WebApp.Pages
         public PartialList<Product> Catalog {get;set;}
         public Paginator Paging {get;set;}
 
-        public void OnGet()
+        public void OnGet(int? currentPage)
         {
-            int pageIndex = 0;
+            int current = currentPage.HasValue ? currentPage.Value : 1;
+            int pageIndex = current - 1;
             int pageSize = 10;
             Catalog = _service.GetProducts(pageIndex * pageSize, pageSize);
             Paging = new(Catalog.TotalCount);
+            Paging.Current = current;
         }
     }
 }

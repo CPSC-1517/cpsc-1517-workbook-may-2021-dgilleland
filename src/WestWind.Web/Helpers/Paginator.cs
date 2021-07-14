@@ -35,8 +35,9 @@ namespace WebApp.Helpers
             get
             {
                 int first = Current;
-                if (first > (LastPage - MaxPageLinks + 1))
-                    first = LastPage - MaxPageLinks + 1;
+                int calculatedFirst = LastPage - MaxPageLinks + 1;
+                if (first > calculatedFirst && calculatedFirst >= FirstPage)
+                    first = calculatedFirst;
                 return first;
             }
         }
