@@ -28,6 +28,7 @@ namespace WebApp.Pages
             int pageSize = 10;
             Catalog = _service.GetProducts(pageIndex * pageSize, pageSize);
             Paging = new(Catalog.TotalCount);
+            Paging.Current = 1;
         }
     }
 }

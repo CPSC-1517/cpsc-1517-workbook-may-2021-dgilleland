@@ -11,13 +11,17 @@ namespace WebApp.Pages
     public class AdHocModel : PageModel
     {
         public Paginator Paging { get; set; }
-
+        public Paginator Revamp { get; set; }
 
         public void OnGet(int? currentPage)
         {
-            Paging = new Paginator(7777);
+            int pageNumber = currentPage.HasValue ? currentPage.Value : 1;
+            Paging = new Paginator(77);
+            Paging.Current = pageNumber;
 
-            Paging.Current = currentPage.HasValue ? currentPage.Value : 1;
+            // -- Revamp below
+            PageState current = new(pageNumber, 10);
+            Revamp = new Paginator(7777, current);
         }
     }
 }

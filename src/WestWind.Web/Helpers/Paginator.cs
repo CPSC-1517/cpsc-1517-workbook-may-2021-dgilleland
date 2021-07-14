@@ -1,7 +1,16 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
 namespace WebApp.Helpers
 {
-    public class Paginator
+    public record PageState(int CurrentPage, int PageSize);
+    public record PageRef(int Page, string Text);
+    
+    public class Paginator : IEnumerable<PageRef>
     {
+#region Obsolete
+        [Obsolete("")] // adding these as needed to guide my "migration" from the old version to the new version
         public Paginator(int totalResults, int pageSize = 10, int maxPageLinks = 10)
         {
             // TODO: Do some validation....
@@ -35,8 +44,9 @@ namespace WebApp.Helpers
             get
             {
                 int first = Current;
-                if (first > (LastPage - MaxPageLinks + 1))
-                    first = LastPage - MaxPageLinks + 1;
+                int calculatedFirst = (LastPage - MaxPageLinks + 1);
+                if (first > calculatedFirst && calculatedFirst >= Current)
+                    first = calculatedFirst;
                 return first;
             }
         }
@@ -74,6 +84,37 @@ namespace WebApp.Helpers
         ///<summary>ToItem is the human-friendly item number for the last item in the current pages' results</summary>
         public int ToItem
         { get { return FromItem + PageSize - 1; } }
+#endregion
 
+        public readonly int TotalItemCount;
+        public readonly PageState CurrentState;
+        private List<PageRef> PageReferences;
+        public string FirstPageText = "<First>";
+        public string LastPageText = "<Last>";
+        public string NextPageText = "<Next>";
+        public string PreviousPageText = "<Prev>";
+
+        public Paginator(int totalItemCount, PageState currentState)
+        {
+            TotalItemCount = totalItemCount;
+            CurrentState = currentState;
+            PageReferences = new List<PageRef>();
+            PageReferences.Add(new(FirstPage, FirstPageText));
+            PageReferences.Add(new(FirstPage, PreviousPageText)); // TODO: Fix
+            // The calculated pages
+
+            PageReferences.Add(new(20, NextPageText)); // TODO: Fix
+            PageReferences.Add(new(20, LastPageText));
+        }
+
+        public IEnumerator<PageRef> GetEnumerator()
+        {
+            return PageReferences.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return PageReferences.GetEnumerator();
+        }
     }
 }
