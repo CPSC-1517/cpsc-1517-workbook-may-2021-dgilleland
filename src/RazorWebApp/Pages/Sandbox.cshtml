@@ -3,4 +3,16 @@
 @{
 }
 
-@* Playing with User Input *@
+<h1>Binding Options to the Select Element</h1>
+
+<form method="post">
+    <select asp-for="SelectedItem">
+        <option value="-1">[Select a rating]</option>
+        @foreach(var item in Model.LotsOfStuff)
+        {
+            <option value="@item.Id">@item.Text</option>
+        }
+    </select>
+    <button type="submit">Send</button>
+</form>
+<p>The current selected item is @Model.SelectedItem</p>
