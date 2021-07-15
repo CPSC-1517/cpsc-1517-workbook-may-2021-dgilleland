@@ -21,9 +21,12 @@ namespace WebApp.Pages
 
         public PartialList<Product> Catalog {get;set;}
         public Paginator Paging {get;set;}
+        [BindProperty]
+        public string PartialName {get;set;}
 
-        public void OnGet(int? currentPage)
+        public void OnGet(int? currentPage, string partialName)
         {
+            PartialName = partialName; // grabbing the QueryString value
             int current = currentPage.HasValue ? currentPage.Value : 1;
             int pageIndex = current - 1;
             int pageSize = 10;
