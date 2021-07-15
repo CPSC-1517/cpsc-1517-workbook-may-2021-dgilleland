@@ -1,33 +1,26 @@
 ﻿@page
 @model AdHocModel
 @{
-    var Paging = Model.Paging;
+    var Paging = Model.Revamp;
 }
 
 <h1><a asp-page="/AdHoc">Pagination Trials</a></h1>
 
-<p>There are @Paging.TotalResults results for this page. You are on page # <b>@Paging.Current</b> of <i>@Paging.PageCount</i> pages, showing items @Paging.FromItem to @Paging.ToItem</p>
 
-<code>@Paging.LastPageLink</code>
-<br/>
-@if(Paging.FirstPageLink != Paging.FirstPage){
-    <a title="First Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.FirstPage">&laquo;</a>
-    <a title="Previous Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.PreviousPage">&lsaquo;</a>
-}
+<h2>Revamped Paginator</h2>
+
+<p>My revamp has @Model.Revamp.TotalItemCount items. I am on page # <b>@Model.Revamp.CurrentState.CurrentPage</b> of <i>@Model.Revamp.LastPage</i> pages, showing items ?? to ??.</p>
+
 @{
-    for(var counter = Paging.FirstPageLink; counter <= Paging.LastPageLink; counter++)
+    foreach(var pageRef in Model.Revamp)
     {
-        if(counter == Paging.Current)
+        if(pageRef == Model.Revamp.CurrentPage) // I can use the == because of PageRef type being a C# 9 record type
         {
-            <b>@counter</b>
+            <b>@pageRef.Text</b>
         }
         else
         {
-        <a asp-page="/AdHoc" asp-route-currentpage="@counter">@counter</a>
+            <a title="Page @pageRef.Page" asp-page="/AdHoc" asp-route-currentpage="@pageRef.Page">@pageRef.Text</a>
         }
     }
-}
-@if(Paging.LastPageLink != Paging.LastPage) {
-    <a title="Next Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.NextPage">&rsaquo;</a>
-    <a title="Last Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.LastPage">&raquo;</a>
 }

@@ -24,15 +24,15 @@ namespace WebApp.Pages
         [BindProperty]
         public string PartialName {get;set;}
 
-        public void OnGet(int? currentPage, string partialName)
+        public void OnGet(int? currentPage)
         {
-            PartialName = partialName; // grabbing the QueryString value
-            int current = currentPage.HasValue ? currentPage.Value : 1;
-            int pageIndex = current - 1;
+            int pageNumber = currentPage.HasValue ? currentPage.Value : 1;
+            int pageIndex = pageNumber - 1; //Zero-based for the calulation of skip
             int pageSize = 10;
-            Catalog = _service.GetProducts(pageIndex * pageSize, pageSize);
-            Paging = new(Catalog.TotalCount);
-            Paging.Current = current;
+            int skip = pageIndex * pageSize;
+            Catalog = _service.GetProducts(skip, pageSize);
+            PageState current = new(pageNumber, pageSize);
+            Paging = new(Catalog.TotalCount, current);
         }
     }
 }
