@@ -21,6 +21,8 @@ namespace WebApp.Pages
 
         public PartialList<Product> Catalog {get;set;}
         public Paginator Paging {get;set;}
+        [BindProperty]
+        public string PartialName {get;set;}
 
         public void OnGet(int? currentPage)
         {
