@@ -1,54 +1,26 @@
 ﻿@page
 @model AdHocModel
 @{
-    var Paging = Model.Paging;
+    var Paging = Model.Revamp;
 }
 
 <h1><a asp-page="/AdHoc">Pagination Trials</a></h1>
 
-<p>There are @Paging.TotalResults results for this page. You are on page # <b>@Paging.Current</b> of <i>@Paging.PageCount</i> pages, showing items @Paging.FromItem to @Paging.ToItem</p>
-<blockquote>
-    <p>First Page: <b>@Paging.FirstPage</b></p>
-    <p>Last Page: <b>@Paging.LastPage</b></p>
-    <p>Current: <b>@Paging.Current</b></p>
-    <p>Max Page Links: <b>@Paging.MaxPageLinks</b></p>
-    <p>First Page Link: <b>@Paging.FirstPageLink</b></p>
-    <p>Last Page Link: <b>@Paging.LastPageLink</b></p>
-</blockquote>
-
-<code>@Paging.LastPageLink</code>
-<br/>
-@if(Paging.FirstPageLink != Paging.FirstPage){
-    <a title="First Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.FirstPage">&laquo;</a>
-    <a title="Previous Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.PreviousPage">&lsaquo;</a>
-}
-@{
-    for(var counter = Paging.FirstPageLink; counter <= Paging.LastPageLink; counter++)
-    {
-        if(counter == Paging.Current)
-        {
-            <b>@counter</b>
-        }
-        else
-        {
-        <a asp-page="/AdHoc" asp-route-currentpage="@counter">@counter</a>
-        }
-    }
-}
-@if(Paging.LastPageLink != Paging.LastPage) {
-    <a title="Next Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.NextPage">&rsaquo;</a>
-    <a title="Last Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.LastPage">&raquo;</a>
-}
-
-<hr />
 
 <h2>Revamped Paginator</h2>
 
-<p>My revamp has @Model.Revamp.TotalItemCount items. I am on page # <b>@Model.Revamp.CurrentState.CurrentPage</b> of ??? pages, showing items ?? to ??.</p>
+<p>My revamp has @Model.Revamp.TotalItemCount items. I am on page # <b>@Model.Revamp.CurrentState.CurrentPage</b> of <i>@Model.Revamp.LastPage</i> pages, showing items ?? to ??.</p>
 
 @{
     foreach(var pageRef in Model.Revamp)
     {
-        <a title="Page @pageRef.Page" asp-page="/AdHoc" asp-route-currentpage="@pageRef.Page">@pageRef.Text</a>
+        if(pageRef == Model.Revamp.CurrentPage) // I can use the == because of PageRef type being a C# 9 record type
+        {
+            <b>@pageRef.Text</b>
+        }
+        else
+        {
+            <a title="Page @pageRef.Page" asp-page="/AdHoc" asp-route-currentpage="@pageRef.Page">@pageRef.Text</a>
+        }
     }
 }

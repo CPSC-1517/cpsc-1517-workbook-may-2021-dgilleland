@@ -27,39 +27,8 @@
         <tr>
             <td colspan="3">
                 @* Paste my work from AdHoc *@
-@if(Paging.FirstPageLink != Paging.FirstPage){
-    <a title="First Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.FirstPage">&laquo;</a>
-    <a title="Previous Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.PreviousPage">&lsaquo;</a>
-}
-@{
-    for(var counter = Paging.FirstPageLink; counter <= Paging.LastPageLink; counter++)
-    {
-        if(counter == Paging.Current)
-        {
-            <b>@counter</b>
-        }
-        else
-        {
-        <a asp-page="/AdHoc" asp-route-currentpage="@counter">@counter</a>
-        }
-    }
-}
-@if(Paging.LastPageLink != Paging.LastPage) {
-    <a title="Next Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.NextPage">&rsaquo;</a>
-    <a title="Last Page" asp-page="/AdHoc" asp-route-currentpage="@Paging.LastPage">&raquo;</a>
-}                
             </td>
         </tr>
     </tfoot>
 </table>
-
-<p>Current Page is @Model.Paging.Current with a page size of @Model.Paging.PageSize. The maximum number of page links is @Model.Paging.MaxPageLinks for showing the total results of <b><u>@Model.Paging.TotalResults</u></b>.</p>
-<blockquote>
-    <p>First Page: <b>@Paging.FirstPage</b></p>
-    <p>Last Page: <b>@Paging.LastPage</b></p>
-    <p>Current: <b>@Paging.Current</b></p>
-    <p>Max Page Links: <b>@Paging.MaxPageLinks</b></p>
-    <p>First Page Link: <b>@Paging.FirstPageLink</b></p>
-    <p>Last Page Link: <b>@Paging.LastPageLink</b></p>
-</blockquote>
 

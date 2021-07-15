@@ -22,13 +22,15 @@ namespace WebApp.Pages
         public PartialList<Product> Catalog {get;set;}
         public Paginator Paging {get;set;}
 
-        public void OnGet()
+        public void OnGet(int? currentPage)
         {
-            int pageIndex = 0;
+            int pageNumber = currentPage.HasValue ? currentPage.Value : 1;
+            int pageIndex = pageNumber - 1; //Zero-based for the calulation of skip
             int pageSize = 10;
-            Catalog = _service.GetProducts(pageIndex * pageSize, pageSize);
-            Paging = new(Catalog.TotalCount);
-            Paging.Current = 1;
+            int skip = pageIndex * pageSize;
+            Catalog = _service.GetProducts(skip, pageSize);
+            PageState current = new(pageNumber, pageSize);
+            Paging = new(Catalog.TotalCount, current);
         }
     }
 }
