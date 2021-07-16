@@ -23,7 +23,7 @@
     </tr>
     @{
         // Loop through the products to create each row
-        foreach(var item in Model.Catalog.Items)
+        foreach (var item in Model.Catalog.Items)
         {
             <tr>
                 <td>@item.ProductName</td>
@@ -35,8 +35,22 @@
     <tfoot>
         <tr>
             <td colspan="3">
+                @{
+                    foreach (var pageRef in Model.Paging)
+                    {
+                        if (pageRef == Model.Paging.CurrentPage) // I can use the == because of PageRef type being a C# 9 record type
+                        {
+                            <b>@pageRef.Text</b>
+                        }
+                        else
+                        {
+                            <a title="Page @pageRef.Page" asp-page="/ViewProductCatalog"
+                                asp-route-currentpage="@pageRef.Page" asp-route-partialname="@Model.PartialName">@pageRef.Text</a>
+                        }
+                    }
+                }
+
             </td>
         </tr>
     </tfoot>
 </table>
-

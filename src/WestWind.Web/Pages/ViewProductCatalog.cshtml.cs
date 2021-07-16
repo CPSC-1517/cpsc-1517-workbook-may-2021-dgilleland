@@ -24,8 +24,9 @@ namespace WebApp.Pages
         [BindProperty]
         public string PartialName {get;set;}
 
-        public void OnGet(int? currentPage)
+        public void OnGet(int? currentPage, string partialName)
         {
+            PartialName = partialName; // Capturing the GET request value to store on the bound property
             int pageNumber = currentPage.HasValue ? currentPage.Value : 1;
             int pageIndex = pageNumber - 1; //Zero-based for the calulation of skip
             int pageSize = 10;
