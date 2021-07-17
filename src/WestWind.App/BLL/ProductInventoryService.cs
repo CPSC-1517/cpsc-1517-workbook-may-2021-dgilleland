@@ -23,11 +23,17 @@ namespace WestWind.App.BLL
             return result.ToList();
         }
 
-        public PartialList<Product> GetProducts(int skip, int take)
+        public PartialList<Product> GetProducts(string partialProductName, int skip, int take)
         {
-            int total = _context.Products.Count();
-            var items = _context.Products.Skip(skip).Take(take);
-            return new PartialList<Product>(total, items.ToList());
+            var items = _context.Products
+                                // The .Where() extension method allows me to filter the Products results
+                                // This method uses a Lambda expression to do the filter check
+                                .Where(item => item.ProductName.Contains(partialProductName))
+                                // The .Skip() extension method says to "pass over" a certain number of rows
+                                .Skip(skip)
+                                // The .Take() extension method says to "retrieve" a certain number of rows
+                                .Take(take);
+            return new PartialList<Product>(items.Count(), items.ToList());
         }
     }
 }

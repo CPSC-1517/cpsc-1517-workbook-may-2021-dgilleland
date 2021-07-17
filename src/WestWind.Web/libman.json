@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "awsm.css@3.0.7",
+      "destination": "wwwroot\\lib\\awsm.css"
+    }
+  ]
+}
