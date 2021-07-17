@@ -157,8 +157,6 @@
         - [&raquo;](https://www.toptal.com/designers/htmlarrows/punctuation/double-right-pointing-angle-quotation-mark/) `&raquo;`
       - **Object**ifying Pagination
 
--->
-
 ## Monday (July 12)
 
 - Displaying Tabular Data
@@ -169,12 +167,21 @@
       - Review `IFormFile`
     - Pagination - *cont*
       - **Why** pagination on the **database side** is the **better way**
+
+-->
+
+## Friday (July 16)
+- Displaying Tabular Data
     - Searching/Filtering (by partial product name)
-    - Sorting
   - Practice: `ViewCustomers`
     - Display `CompanyName`, `ContactName`, `ContactTitle`, `ContactEmail`
 - CRUD Applications
   - Edit Page for `Product` (`ProductEditor.cshtml`)
+
+## Monday (July 19)
+
+- CRUD Applications
+    - Setup page
     - `Supplier` and `Category` Entities for drop-downs
   - **Add** and **Edit** Links from tabular page
   - BLL Methods to Add/Update/Delete per-table
