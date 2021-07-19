@@ -33,7 +33,8 @@ namespace WestWind.App.BLL
                                 .Skip(skip)
                                 // The .Take() extension method says to "retrieve" a certain number of rows
                                 .Take(take);
-            return new PartialList<Product>(items.Count(), items.ToList());
+            var itemCount = _context.Products.Where(item => item.ProductName.Contains(partialProductName)).Count();
+            return new PartialList<Product>(itemCount, items.ToList());
         }
     }
 }
