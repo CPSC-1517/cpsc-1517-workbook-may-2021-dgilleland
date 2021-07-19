@@ -168,8 +168,6 @@
     - Pagination - *cont*
       - **Why** pagination on the **database side** is the **better way**
 
--->
-
 ## Friday (July 16)
 - Displaying Tabular Data
     - Searching/Filtering (by partial product name)
@@ -178,8 +176,16 @@
 - CRUD Applications
   - Edit Page for `Product` (`ProductEditor.cshtml`)
 
+-->
+
 ## Monday (July 19)
 
+- In-Class 3 - *Moved to Friday **July 23***
+  - Multiple Choice Questions
+  - Coding Questions
+    - Razor Pages - User I/O
+- **Tips on SQL Exceptions**
+- Logic error in Product Catalog search results ([Issue 7](https://github.com/CPSC-1517/cpsc-1517-workbook-may-2021-dgilleland/issues/7))
 - CRUD Applications
     - Setup page
     - `Supplier` and `Category` Entities for drop-downs
