@@ -36,5 +36,15 @@ namespace WestWind.App.BLL
             var itemCount = _context.Products.Where(item => item.ProductName.Contains(partialProductName)).Count();
             return new PartialList<Product>(itemCount, items.ToList());
         }
+
+        public List<Category> ListCategories()
+        {
+            return _context.Categories.ToList();
+        }
+
+        public List<Supplier> ListSuppliers()
+        {
+            return _context.Suppliers.ToList();
+        }
     }
 }
