@@ -24,13 +24,18 @@ namespace WebApp.Pages
         [BindProperty]
         public Product ProductItem { get; set; }
 
-        public void OnGet()
+        public void OnGet(int? id) // Allow an optional integer value for the id of the product to edit
         {
+            if(id.HasValue) // A nullable int will have a property called .HasValue
+            {
+                ProductItem = _service.GetProduct(id.Value); // The .Value property of the nullable int is an acutal int
+            }
             PopulateDropDown();
         }
 
         public void OnPost()
         {
+            int id = _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
             PopulateDropDown();
         }
 

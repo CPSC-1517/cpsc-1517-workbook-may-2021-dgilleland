@@ -189,10 +189,18 @@
 - CRUD Applications
     - Setup page
     - `Supplier` and `Category` Entities for drop-downs
+
+## Wednesday (July 21)
+
+- CRUD Applications
   - **Add** and **Edit** Links from tabular page
   - BLL Methods to Add/Update/Delete per-table
   - Page Handlers for Add/Update/Delete
 - Validating User Input
+
+## Friday (July 23)
+
+- **In-Class 3**
 
 ----
 

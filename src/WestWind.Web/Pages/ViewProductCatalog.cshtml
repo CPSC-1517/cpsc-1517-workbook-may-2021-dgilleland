@@ -6,6 +6,10 @@
 
 <h1>Product Catalog</h1>
 
+<form method="get" action="/ProductEditor">
+    <button type="submit">New Product...</button>
+</form>
+
 <form method="get">
     <label>Partial Product Name
         <input type="search" asp-for="PartialName" />
@@ -24,6 +28,7 @@ else
 
 <table class="table table-hover">
     <tr>
+        <td>Action</td>
         <td>Name</td>
         <td>Quantity Per Unit</td>
         <td>Price</td>
@@ -33,6 +38,7 @@ else
         foreach (var item in Model.Catalog.Items)
         {
             <tr>
+                <td><a asp-page="ProductEditor" asp-route-id="@item.ProductID">Edit</a></td>
                 <td>@item.ProductName</td>
                 <td>@item.QuantityPerUnit</td>
                 <td>@item.UnitPrice.ToString("C")</td>

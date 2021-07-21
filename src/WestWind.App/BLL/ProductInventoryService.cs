@@ -39,12 +39,30 @@ namespace WestWind.App.BLL
 
         public List<Category> ListCategories()
         {
-            return _context.Categories.ToList();
+            return _context.Categories.ToList(); // Gets all the categories in the database
         }
 
         public List<Supplier> ListSuppliers()
         {
-            return _context.Suppliers.ToList();
+            return _context.Suppliers.ToList(); // Gets all the suppliers in the database
         }
+
+        #region CRUD functionality for managing data in the Products table
+        public Product GetProduct(int productId)
+        {
+            return _context.Products.Find(productId); // Find a single product with the PK of productID
+        }
+
+        public int AddProduct(Product item)
+        {
+            _context.Products.Add(item); // Put the new product item in the DbSet<Product>
+            _context.SaveChanges(); // Examine the database context to see if there are any changes in the DbSet items
+                                    // and then will save those changes to the database
+            // Because the ProductID on the database table is an IDENTITY column, the database will generate the
+            // value for this newly added item
+            // I will see that new value reflected in my Product item object.
+            return item.ProductID; // Send back the database-generated PK value for this new row of data.
+        }
+        #endregion
     }
 }
