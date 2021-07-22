@@ -33,10 +33,13 @@ namespace WebApp.Pages
             PopulateDropDown();
         }
 
-        public void OnPost()
+        // An IActionResult allows me more control in communicating the results of this request to the web browser
+        public IActionResult OnPost() 
         {
-            int id = _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
-            PopulateDropDown();
+            _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
+            // Use the POST-Redirect-GET pattern to prevent inadvertant resubmissions of POST requests
+            return RedirectToPage(new {id = ProductItem.ProductID });
+            // PopulateDropDown();
         }
 
         private void PopulateDropDown()
