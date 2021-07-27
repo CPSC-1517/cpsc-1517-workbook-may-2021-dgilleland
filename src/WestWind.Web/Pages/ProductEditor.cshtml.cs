@@ -34,12 +34,24 @@ namespace WebApp.Pages
         }
 
         // An IActionResult allows me more control in communicating the results of this request to the web browser
-        public IActionResult OnPost() 
+        public IActionResult OnPostAdd() 
         {
             _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
             // Use the POST-Redirect-GET pattern to prevent inadvertant resubmissions of POST requests
             return RedirectToPage(new {id = ProductItem.ProductID });
             // PopulateDropDown();
+        }
+
+        public IActionResult OnPostUpdate()
+        {
+            _service.UpdateProduct(ProductItem);
+            return RedirectToPage(new {id = ProductItem.ProductID });
+        }
+
+        public IActionResult OnPostDelete()
+        {
+            _service.DeleteProduct(ProductItem);
+            return RedirectToPage(new {id = (int?)null}); // I need to remember to be explicit about having a "blank" product id
         }
 
         private void PopulateDropDown()

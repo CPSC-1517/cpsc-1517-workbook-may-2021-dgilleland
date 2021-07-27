@@ -176,8 +176,6 @@
 - CRUD Applications
   - Edit Page for `Product` (`ProductEditor.cshtml`)
 
--->
-
 ## Monday (July 19)
 
 - In-Class 3 - *Moved to Friday **July 23***
@@ -192,15 +190,37 @@
 
 ## Wednesday (July 21)
 
-- CRUD Applications
+- CRUD Applications per-table
   - **Add** and **Edit** Links from tabular page
-  - BLL Methods to Add/Update/Delete per-table
-  - Page Handlers for Add/Update/Delete
+  - BLL Methods to Add
+  - Page Handlers for Add
 - Validating User Input
 
 ## Friday (July 23)
 
 - **In-Class 3**
+
+-->
+
+
+## Monday (July 26)
+
+- CRUD Applications per-table
+  - BLL Methods to Update/Delete
+  - Page Handlers for Update/Delete
+- Validating User Input
+  - Types of Validation
+    - Browser (Client-Side) - Provides User Guidance
+    - Database - Ensure Data Integrity
+    - Business Processing - Enforce business rules
+  - Try/Catch
+  - Data Annotations
+  - `asp-validation-for`
+
+## Wednesday (July 28)
+
+- Project Introduction
+  - Deliverable #1 Walk-through
 
 ----
 

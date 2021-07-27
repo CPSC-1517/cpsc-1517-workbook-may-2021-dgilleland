@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using WestWind.App.Entities;
 using System.Linq; // Language Integrated Query
 using WestWind.App.Collections;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
+using Microsoft.EntityFrameworkCore;
 
 namespace WestWind.App.BLL
 {
@@ -62,6 +64,24 @@ namespace WestWind.App.BLL
             // value for this newly added item
             // I will see that new value reflected in my Product item object.
             return item.ProductID; // Send back the database-generated PK value for this new row of data.
+        }
+
+        public void UpdateProduct(Product item)
+        {
+            // The .Entry() method will fetch the most recent information on the Product object as it exists in the database.
+            // It can do that because the Product item we are supplying has the ProductID
+            EntityEntry<Product> existing = _context.Entry(item);
+            // Next, I tell EF that I do indeed want to modify whatever is in the database with
+            // what item information I have been given through my parameter variable.
+            existing.State = EntityState.Modified;
+            _context.SaveChanges(); // Perform an update on the database with the changes supplied
+        }
+
+        public void DeleteProduct(Product item)
+        {
+            EntityEntry<Product> existing = _context.Entry(item);
+            existing.State = EntityState.Deleted; // I want to delete this from the databae
+            _context.SaveChanges();
         }
         #endregion
     }

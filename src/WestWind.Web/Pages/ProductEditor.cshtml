@@ -11,7 +11,9 @@
 }
 
 <form method="post">
-    <button type="submit">Add Product</button>
+    <button type="submit" asp-page-handler="Add">Add Product</button>
+    <button type="submit" asp-page-handler="Update">Update Product</button>
+    <button type="submit" asp-page-handler="Delete">Delete Product</button>
 
     <label>Product ID
         <input type="number" asp-for="ProductItem.ProductID" />
