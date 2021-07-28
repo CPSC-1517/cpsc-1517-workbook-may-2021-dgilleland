@@ -208,6 +208,15 @@
 - CRUD Applications per-table
   - BLL Methods to Update/Delete
   - Page Handlers for Update/Delete
+
+## Wednesday (July 28)
+
+- Project Introduction
+  - Deliverable #1 Walk-through
+- UX Improvements
+  - Client-side confirmation of delete: `onclick="return confirm('Are you sure you want to delete this record?');"`
+  - Enable/Disable Update/Delete buttons: `@(Model.ProductItem == null ? "" : "disable")`
+- [Reverse Engineering Databases](#reverse-engineering)
 - Validating User Input
   - Types of Validation
     - Browser (Client-Side) - Provides User Guidance
@@ -217,10 +226,7 @@
   - Data Annotations
   - `asp-validation-for`
 
-## Wednesday (July 28)
-
-- Project Introduction
-  - Deliverable #1 Walk-through
+## Friday (July 30)
 
 ----
 
@@ -268,3 +274,21 @@ public void ConfigureServices(IServiceCollection services)
     services.AddTransient<TService>();
 }
 ```
+
+----
+
+### Reverse Engineering
+
+> More information on [Reverse Engineering can be found here](https://docs.microsoft.com/ef/core/managing-schemas/scaffolding?tabs=dotnet-core-cli).
+
+```shell
+dotnet ef dbcontext scaffold "Data Source=.;Initial Catalog=WestWind" Microsoft.EntityFrameworkCore.SqlServer
+```
+
+Here are some flags that can be added to that scaffolding:
+
+- `--context WestWindContext`
+- `--context-dir DAL`
+- `--output-dir Entities`
+- `--table Products`
+- `--data-annotations`
