@@ -200,8 +200,6 @@
 
 - **In-Class 3**
 
--->
-
 
 ## Monday (July 26)
 
@@ -217,14 +215,18 @@
   - Client-side confirmation of delete: `onclick="return confirm('Are you sure you want to delete this record?');"`
   - Enable/Disable Update/Delete buttons: `@(Model.ProductItem == null ? "" : "disable")`
 
+-->
+
 ## Friday (July 30)
 
 - [Reverse Engineering Databases](#reverse-engineering)
 - Validating User Input
   - Types of Validation
-    - Browser (Client-Side) - Provides User Guidance
-    - Database - Ensure Data Integrity
-    - Business Processing - Enforce business rules
+    - **Browser**
+      - *Client-Side* - Provides User Guidance
+      - *Web-Server-Side* - `try/catch`
+    - **Database** - Ensure Data Integrity
+    - **Business Processing** - Enforce business rules
   - Try/Catch
   - Data Annotations
   - `asp-validation-for`
