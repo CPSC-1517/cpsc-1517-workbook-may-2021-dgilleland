@@ -228,6 +228,10 @@
   - Try/Catch
   - Data Annotations
   - `asp-validation-for`
+    - `libman install jquery -p unpkg`
+    - `libman install jquery-validation -p unpkg`
+    - `libman install jquery-validation-unobtrusive -p unpkg`
+  - Read [https://www.learnrazorpages.com/razor-pages/validation](https://www.learnrazorpages.com/razor-pages/validation)
 
 ----
 
