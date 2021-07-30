@@ -6,8 +6,8 @@
 
   body header, body main, body footer, body article {
       position: relative;
-      max-width: 80rem;
-      margin: 0 auto;
+      max-width: 100%;
+      margin: 0 10rem;
   }
 
   body > header {
@@ -16,8 +16,10 @@
   }
 
       body > header > nav {
+          /* Include if you have multiple <ul> children 
           display: grid;
-          grid-template-columns: auto 80rem auto;
+          grid-template-columns: auto 80rem auto; 
+          */
           background-color: black;
           color: white;
           margin-top: 0;
@@ -25,7 +27,10 @@
       }
 
           body > header > nav > ul {
-              margin: 1rem;
+            max-width: 100%;
+            margin: 0 10rem 1rem 10rem;
+            padding-top: 1rem;
+            min-height: 3rem;
           }
 
 nav > ul > li {
@@ -52,6 +57,17 @@ header > nav > ul:last-child {
   text-align: right;
 }
 
+header > nav > ul:last-child {
+text-align: left;
+}
+
 main > *:first-child {
   margin-top: 1rem;
+}
+
+form {
+  margin-left: 0;
+}
+form label > select {
+  display: inline-block;
 }
