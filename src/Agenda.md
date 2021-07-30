@@ -337,3 +337,84 @@ Options:
   --no-color                             Don't colorize output.
   --prefix-output                        Prefix output with level.
   ```
+
+
+#### Improved `site.css`
+
+Here's an improved `site.css` for use with the awsm.css library.
+
+```css
+body {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+    body header, body main, body footer, body article {
+        position: relative;
+        max-width: 100%;
+        margin: 0 10rem;
+    }
+
+    body > header {
+        max-width: 100%;
+        margin: 0;
+    }
+
+        body > header > nav {
+            /* Include if you have multiple <ul> children 
+            display: grid;
+            grid-template-columns: auto 80rem auto; 
+            */
+            background-color: black;
+            color: white;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+            body > header > nav > ul {
+              max-width: 100%;
+              margin: 0 10rem 1rem 10rem;
+              padding-top: 1rem;
+              min-height: 3rem;
+            }
+
+nav > ul > li {
+    margin-top: 0.25em;
+}
+
+body > header a, body > header a:visited {
+    color: whitesmoke;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+header > figure {
+    height: 200px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+header > nav > ul:last-child {
+    text-align: right;
+}
+
+header > nav > ul:last-child {
+  text-align: left;
+}
+
+main > *:first-child {
+    margin-top: 1rem;
+}
+
+form {
+    margin-left: 0;
+}
+form label > select {
+    display: inline-block;
+}
+```
