@@ -216,6 +216,9 @@
 - UX Improvements
   - Client-side confirmation of delete: `onclick="return confirm('Are you sure you want to delete this record?');"`
   - Enable/Disable Update/Delete buttons: `@(Model.ProductItem == null ? "" : "disable")`
+
+## Friday (July 30)
+
 - [Reverse Engineering Databases](#reverse-engineering)
 - Validating User Input
   - Types of Validation
@@ -225,8 +228,6 @@
   - Try/Catch
   - Data Annotations
   - `asp-validation-for`
-
-## Friday (July 30)
 
 ----
 
