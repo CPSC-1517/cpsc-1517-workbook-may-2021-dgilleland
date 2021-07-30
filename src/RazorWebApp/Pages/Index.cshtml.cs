@@ -38,8 +38,22 @@ namespace RazorWebApp.Pages
             
         }
 
+        [BindProperty]
+        public bool DisableButton { get; set; }
+        [BindProperty]
+        public bool ButtonDemo { get; set; }
+        public void OnPostToggle()
+        {
+            DisableButton = !DisableButton;
+        }
+        public void OnPostEnable()
+        {
+            DisableButton = false;
+        }
+
         public void OnPost()
         {
+            if(ButtonDemo) DisableButton = !DisableButton;
             // if there is a UserFile (not null)...
             if (UserFile != null)
             {

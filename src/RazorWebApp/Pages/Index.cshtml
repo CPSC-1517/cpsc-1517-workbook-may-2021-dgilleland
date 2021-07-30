@@ -34,6 +34,28 @@
 
 <hr />
 
+<form method="post">
+    <button type="submit" asp-page-handler="Enable">Enable</button>
+    <label></label><input type="checkbox" asp-for="DisableButton" /> Disable Button</label>
+</form>
+<form method="post">
+    <input type="hidden" asp-for="ButtonDemo" value="true" />
+    <button type="submit" @(Model.DisableButton ? "disabled" : "")>Disable by ternary</button>
+
+    @if(Model.DisableButton)
+    {
+    <button type="submit" asp-page-handler="Toggle" disabled>Disable  by @@if(){}</button>
+
+    }
+    else
+    {
+    <button type="submit" asp-page-handler="Toggle">Disable  by @@if(){}</button>
+        
+    }
+</form>
+
+<hr />
+
 <h2>Good vs Bad Design</h2>
 
 <p>A basic principle of good design is to encourage "loose coupling" between the various "parts" of you application.</p>
