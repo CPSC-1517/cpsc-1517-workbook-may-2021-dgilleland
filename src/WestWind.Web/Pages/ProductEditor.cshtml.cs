@@ -17,8 +17,8 @@ namespace WebApp.Pages
         {
             _service = service ?? throw new ArgumentNullException(nameof(service));
         }
-        
-        public List<Category> Categories {get;set;}
+
+        public List<Category> Categories { get; set; }
         public List<SelectListItem> Suppliers { get; set; }
 
         [BindProperty]
@@ -26,7 +26,7 @@ namespace WebApp.Pages
 
         public void OnGet(int? id) // Allow an optional integer value for the id of the product to edit
         {
-            if(id.HasValue) // A nullable int will have a property called .HasValue
+            if (id.HasValue) // A nullable int will have a property called .HasValue
             {
                 ProductItem = _service.GetProduct(id.Value); // The .Value property of the nullable int is an acutal int
             }
@@ -34,31 +34,79 @@ namespace WebApp.Pages
         }
 
         // An IActionResult allows me more control in communicating the results of this request to the web browser
-        public IActionResult OnPostAdd() 
+        public IActionResult OnPostAdd()
         {
-            _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
-            // Use the POST-Redirect-GET pattern to prevent inadvertant resubmissions of POST requests
-            return RedirectToPage(new {id = ProductItem.ProductID });
-            // PopulateDropDown();
+            try
+            {
+                _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
+                                                  // Use the POST-Redirect-GET pattern to prevent inadvertant resubmissions of POST requests
+                return RedirectToPage(new { id = ProductItem.ProductId });
+            }
+            catch (Exception ex)
+            {
+                // Start with the assumption that the given exception is the root of the problem
+                Exception rootCause = ex;
+                // Loop to "drill-down" to what the original cause of the problem is
+                while (rootCause.InnerException != null)
+                    rootCause = rootCause.InnerException;
+
+                ErrorMessage = rootCause.Message;
+                PopulateDropDown();
+                return Page(); // Return the page as the POST result - This will preserve any user inputs
+            }
         }
 
         public IActionResult OnPostUpdate()
         {
-            _service.UpdateProduct(ProductItem);
-            return RedirectToPage(new {id = ProductItem.ProductID });
+            try
+            {
+                _service.UpdateProduct(ProductItem);
+                // Redirect to GET request since everything worked out OK
+                return RedirectToPage(new { id = ProductItem.ProductId });
+            }
+            catch (Exception ex)
+            {
+                // Start with the assumption that the given exception is the root of the problem
+                Exception rootCause = ex;
+                // Loop to "drill-down" to what the original cause of the problem is
+                while (rootCause.InnerException != null)
+                    rootCause = rootCause.InnerException;
+
+                ErrorMessage = rootCause.Message;
+                PopulateDropDown();
+                return Page(); // Return the page as the POST result - This will preserve any user inputs
+            }
         }
+
+        // TODO: Move this property back up  with the other later on
+        public string ErrorMessage { get; set; }
 
         public IActionResult OnPostDelete()
         {
-            _service.DeleteProduct(ProductItem);
-            return RedirectToPage(new {id = (int?)null}); // I need to remember to be explicit about having a "blank" product id
+            try
+            {
+                _service.DeleteProduct(ProductItem);
+                return RedirectToPage(new { id = (int?)null }); // I need to remember to be explicit about having a "blank" product id
+            }
+            catch (Exception ex)
+            {
+                // Start with the assumption that the given exception is the root of the problem
+                Exception rootCause = ex;
+                // Loop to "drill-down" to what the original cause of the problem is
+                while (rootCause.InnerException != null)
+                    rootCause = rootCause.InnerException;
+
+                ErrorMessage = rootCause.Message;
+                PopulateDropDown();
+                return Page(); // Return the page as the POST result - This will preserve any user inputs
+            }
         }
 
         private void PopulateDropDown()
         {
             Categories = _service.ListCategories();
             Suppliers = _service.ListSuppliers()
-                                .Select(x => new SelectListItem(x.CompanyName, x.SupplierID.ToString()))
+                                .Select(x => new SelectListItem(x.CompanyName, x.SupplierId.ToString()))
                                 .ToList();
         }
     }

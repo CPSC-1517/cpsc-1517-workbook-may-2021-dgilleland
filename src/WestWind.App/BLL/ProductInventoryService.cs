@@ -63,7 +63,7 @@ namespace WestWind.App.BLL
             // Because the ProductID on the database table is an IDENTITY column, the database will generate the
             // value for this newly added item
             // I will see that new value reflected in my Product item object.
-            return item.ProductID; // Send back the database-generated PK value for this new row of data.
+            return item.ProductId; // Send back the database-generated PK value for this new row of data.
         }
 
         public void UpdateProduct(Product item)

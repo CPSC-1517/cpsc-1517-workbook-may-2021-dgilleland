@@ -1,9 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+#nullable disable
+
 namespace WestWind.App.Entities
 {
-    public class Shipper
+    public partial class Shipper
     {
-        public int ShipperID { get; set; }
+        [Key]
+        [Column("ShipperID")]
+        public int ShipperId { get; set; }
+        [Required]
+        [StringLength(40)]
         public string CompanyName { get; set; }
+        [Required]
+        [StringLength(24)]
         public string Phone { get; set; }
     }
 }
