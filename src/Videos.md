@@ -265,76 +265,76 @@
 
 ## [W08-D03](https://youtu.be/QP5PovVcbYQ)
 
-0:00 - Intro
-0:09 - Tonight's Agenda
-0:37 - Empty Web App - Default Pages
-7:10 - Razor Pages Web Applications
-19:40 - About Razor Pages
-45:13 - Layout Pages
-53:53 - Simple Web Form in Razor Pages
-1:16:37 - Trouble-shooting
-1:39:21 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda
+- 0:37 - Empty Web App - Default Pages
+- 7:10 - Razor Pages Web Applications
+- 19:40 - About Razor Pages
+- 45:13 - Layout Pages
+- 53:53 - Simple Web Form in Razor Pages
+- 1:16:37 - Trouble-shooting
+- 1:39:21 - Outro
 
 ----
 
 ## [W09-D01](https://youtu.be/GrlNPOei0xk)
 
-0:00 - Intro
-0:09 - Tonight's Agenda
-2:50 - Understanding the Web Host Environment
-16:16 - Trouble-shooting
-27:14 - Finish Upcoming Events form
-55:07 - (Rabbit Trail) "Clearing" the Form
-1:09:49 - DotNet CLI - New Razor Page
-1:12:12 - More Trouble-shooting
-1:13:14 - Setup for Learning Form Tags
-1:21:19 - To Be Continued....
-1:21:40 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda
+- 2:50 - Understanding the Web Host Environment
+- 16:16 - Trouble-shooting
+- 27:14 - Finish Upcoming Events form
+- 55:07 - (Rabbit Trail) "Clearing" the Form
+- 1:09:49 - DotNet CLI - New Razor Page
+- 1:12:12 - More Trouble-shooting
+- 1:13:14 - Setup for Learning Form Tags
+- 1:21:19 - To Be Continued....
+- 1:21:40 - Outro
 
 ## [W09-D02](https://youtu.be/Gfcq75P_l3c)
 
-0:00 - Intro
-0:09 - Tonight's Agenda
-1:57 - Readings
-4:00 - Going with a Class-less Stylesheet (awsm.css)
-46:56 - Loosely Coupling Content, Presentation, and Behaviour
-57:49 - Exploring Input Element with DataList
-1:32:45 - The Select/Option Elements
-1:42:13 - Agenda for Next Class
-1:46:26 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda
+- 1:57 - Readings
+- 4:00 - Going with a Class-less Stylesheet (awsm.css)
+- 46:56 - Loosely Coupling Content, Presentation, and Behaviour
+- 57:49 - Exploring Input Element with DataList
+- 1:32:45 - The Select/Option Elements
+- 1:42:13 - Agenda for Next Class
+- 1:46:26 - Outro
 
 ## [W09-D03](https://youtu.be/rPmyCRX0FbY)
 
-0:00 - Intro
-0:09 - Tonight's Agenda
-4:35 - Understanding Client-Server
-36:54 - Setting Up Client-Server in VS Code
-55:09 - West-Wind Wholesale - Setup
-1:34:23 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda
+- 4:35 - Understanding Client-Server
+- 36:54 - Setting Up Client-Server in VS Code
+- 55:09 - West-Wind Wholesale - Setup
+- 1:34:23 - Outro
 
 ----
 
 ## [W10-D01](https://youtu.be/u6KTC8XjjAo)
 
-0:00 - Intro
-0:09 - Tonight's Agenda
-1:23 - WestWindDemo - Startup Configuration + App Settings
-33:58 - Troubleshooting Configuration
-54:13 - Uploading Files
-1:36:28 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda
+- 1:23 - WestWindDemo - Startup Configuration + App Settings
+- 33:58 - Troubleshooting Configuration
+- 54:13 - Uploading Files
+- 1:36:28 - Outro
 
 ## [W10-D02](https://youtu.be/Lhd8Xdl9H4c)
 
-0:00 - Intro
-0:09 - Tonight's Agenda
-2:00 - WestWind Product Catalog - Planning
-9:00 - Coding the Entities, DAL, BLL
-26:20 - Create View Product Catalog Page & Register Service
-44:00 - HTML Table to Display Products
-53:06 - Pagination - Understanding the Behaviour & Wresting The Logic
-1:38:03 - For Next Class...
-1:39:34 - Troubleshooting & Student Questions
-1:47:23 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda
+- 2:00 - WestWind Product Catalog - Planning
+- 9:00 - Coding the Entities, DAL, BLL
+- 26:20 - Create View Product Catalog Page & Register Service
+- 44:00 - HTML Table to Display Products
+- 53:06 - Pagination - Understanding the Behaviour & Wresting The Logic
+- 1:38:03 - For Next Class...
+- 1:39:34 - Troubleshooting & Student Questions
+- 1:47:23 - Outro
 
 ----
 
@@ -342,63 +342,63 @@ A little tip at 1:15:24 about naming your parameter routes.
 
 ## [W10-D03](https://youtu.be/kZnJRnjnj5E)
 
-0:00 - Intro
-0:09 - Tonight's Agenda and Announcements
-03:32 - Continuing the Pagination Problem
-1:40:30 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda and Announcements
+- 03:32 - Continuing the Pagination Problem
+- 1:40:30 - Outro
 
 ----
 
 ## [W11-D01](https://youtu.be/7DepWEooWMQ)
 
-0:00 - Intro
-0:09 - Tonight's Agenda and Announcements
-2:47 - Set up and Student Questions List
-8:30 - Pagination for Database Data - Skip/Take
-24:22 - View Product Catalog Pagination
-1:06:44 - Review IFormFile & System.IO Directory/Path/File
-1:39:49 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda and Announcements
+- 2:47 - Set up and Student Questions List
+- 8:30 - Pagination for Database Data - Skip/Take
+- 24:22 - View Product Catalog Pagination
+- 1:06:44 - Review IFormFile & System.IO Directory/Path/File
+- 1:39:49 - Outro
 
 ## [W11-D02](https://youtu.be/Kg-lsVlEhSE)
 
-0:00 - Intro
-0:09 - Paginator - Hot Fix
-21:32 - My New StreamDeck :)
-22:46 - Next Topics and Homework Practice
-25:18 - DropDown Diversion - Taking Another Look
-1:09:12 - Searching/Filtering Products
-1:22:05 - Plan for Next Class
-1:24:40 - Bonus - More on POST vs GET & Stateless HTTP
-1:33:05 - Outro
+- 0:00 - Intro
+- 0:09 - Paginator - Hot Fix
+- 21:32 - My New StreamDeck :)
+- 22:46 - Next Topics and Homework Practice
+- 25:18 - DropDown Diversion - Taking Another Look
+- 1:09:12 - Searching/Filtering Products
+- 1:22:05 - Plan for Next Class
+- 1:24:40 - Bonus - More on POST vs GET & Stateless HTTP
+- 1:33:05 - Outro
 
 ## [W11-D03](https://youtu.be/IuzD_t0lYMo)
 
-0:00 - Intro
-0:09 - Tonight's Agenda and Announcements
-1:50 - Pagination 2.0
-16:00 - Searching/Filtering
-1:02:32 - Setting up the CRUD Form
-1:27:14 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda and Announcements
+- 1:50 - Pagination 2.0
+- 16:00 - Searching/Filtering
+- 1:02:32 - Setting up the CRUD Form
+- 1:27:14 - Outro
 
 ----
 
 ## [W12-D01](https://youtu.be/GhQgE0LE750)
 
-0:00 - Intro
-0:09 - Tonight's Agenda and Announcements
-4:00 - Questions & Tips on Exceptions
-12:32 - Fix for GetProducts' Incorrect Item Count
-18:10 - Product Editor - Listing Suppliers and Categories
-1:04:16 - Binding Form Data to a Product Object
-1:34:54 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda and Announcements
+- 4:00 - Questions & Tips on Exceptions
+- 12:32 - Fix for GetProducts' Incorrect Item Count
+- 18:10 - Product Editor - Listing Suppliers and Categories
+- 1:04:16 - Binding Form Data to a Product Object
+- 1:34:54 - Outro
 
 ## [W12-D02](https://youtu.be/ILGNFrEdUbE)
 
-0:00 - Intro
-0:09 - Tonight's Agenda and Announcements
-1:40 - Resume Product Editor - Read and Add
-53:26 - Post-Redirect-Get
-1:24:32 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda and Announcements
+- 1:40 - Resume Product Editor - Read and Add
+- 53:26 - Post-Redirect-Get
+- 1:24:32 - Outro
 
 ## W12-D03
 
@@ -408,12 +408,12 @@ A little tip at 1:15:24 about naming your parameter routes.
 
 ## [W13-D01](https://youtu.be/S-bzKExwaFs)
 
-0:00 - Intro
-0:09 - Tonight's Agenda and Announcements
-3:22 - Product Editor - Update & Delete
-32:28 - Deep Dive into Page Handlers and Post-Redirect-Get (with fixes)
-1:30:00 - Summary & Happy Path Walkthru (with fixes)
-1:48:42 - Outro
+- 0:00 - Intro
+- 0:09 - Tonight's Agenda and Announcements
+- 3:22 - Product Editor - Update & Delete
+- 32:28 - Deep Dive into Page Handlers and Post-Redirect-Get (with fixes)
+- 1:30:00 - Summary & Happy Path Walkthru (with fixes)
+- 1:48:42 - Outro
 
 ## W13-D02
 
