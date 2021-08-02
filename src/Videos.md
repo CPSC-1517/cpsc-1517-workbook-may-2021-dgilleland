@@ -1,8 +1,8 @@
-# Dan's Video Playlist
+# [Dan's Video Playlist](https://www.youtube.com/watch?v=uSFn0Q67vog&list=PLWtPDlPVWF-9cDDuxxZ0XnDyYTmC_qTqW)
 
 ----
 
-## W01-D01
+## [W01-D01](https://youtu.be/uSFn0Q67vog)
 
 - 0:00 - Intro
 - 0:08 - Course and Instructor Intro
@@ -20,7 +20,7 @@
 - 1:19:21 - Software and Resources
 - 1:41:11 - Outro
 
-## W01-D02
+## [W01-D02](https://youtu.be/aeHTSED3dz0)
 
 - 0:00 - Intro
 - 0:07 - Announcements and Reminders
@@ -28,7 +28,7 @@
 - 19:39 - Using VS Code + Simple Markdown
 - 47:53 - Git from the Command Line with Top-Level Programs
 
-## W01-D03
+## [W01-D03](https://youtu.be/pvGfRFGLnZU)
 
 - 0:00 - Intro
 - 0:08 - Recap, Announcements and Reminders
@@ -45,7 +45,7 @@
 
 ----
 
-## W02-D01
+## [W02-D01](https://youtu.be/4WkMMbcFe8Q)
 
 - 0:00 - Intro
 - 0:10 - A Simplified C# Grammar - Overview
@@ -55,7 +55,7 @@
 - 1:28:04 - Objects, Inheritance and More
 - 1:42:41 - Outro
 
-## W02-D02
+## [W02-D02](https://youtu.be/0PYioaJXnCc)
 
 - 0:00 - Intro
 - 0:10 - Overview
@@ -67,7 +67,7 @@
 - 1:09:47 - Slideshow - Object Examples
 - 1:36:02 - Outro
 
-## W02-D03
+## [W02-D03](https://youtu.be/_Q88AvgF74k)
 
 - 0:00 - Intro
 - 0:09 - Overview - VS Code Updates
@@ -79,7 +79,7 @@
 
 ----
 
-## W03-D01
+## [W03-D01](https://youtu.be/2hTIAiW_H3k)
 
 - 0:00 - Intro
 - 0:10 - Object ABCs Q & A
@@ -87,7 +87,7 @@
 - 1:15:07 - Run and Debug in VS Code
 - 1:38:40 - Outro
 
-## W03-D02
+## [W03-D02](https://youtu.be/9SsclKXfQzg)
 
 - 0:00 - Intro
 - 0:11 - Pull Request Starter Packs
@@ -98,7 +98,7 @@
 - 1:23:43 - Coding Sweat-Shop - Banking and Gaming
 - 1:37:55 - Outro
 
-## W03-D03
+## [W03-D03](https://youtu.be/o-pPF65asaI)
 
 - 0:00 - Intro
 - 0:12 - Agenda/Announcements/Questions
@@ -114,7 +114,7 @@
 > Holiday
 
 
-## W04-D02
+## [W04-D02](https://youtu.be/9SwaXASOcFc)
 
 - 0:00 - Intro
 - 0:08 - LinqPad OOP Recap
@@ -126,7 +126,7 @@
 - 1:02:20 - Banking Examples (and answers to Student Questions)
 - 1:35:43 - Outro
 
-## W04-D03
+## [W04-D03](https://youtu.be/NvJyHWh5erI)
 
 - 0:00 - Intro
 - 0:08 - Getting Started with Take-Home Exercises
@@ -136,7 +136,7 @@
 
 ----
 
-## W05-D01
+## [W05-D01](https://youtu.be/pfk5mDSHILY)
 
 - 0:00 - Intro
 - 0:09 - Quiz Announcements
@@ -145,7 +145,7 @@
 - 1:40:18 - Questions on Take-Home Exercise 01
 - 2:05:26 - Outro
 
-## W05-D02
+## [W05-D02](https://youtu.be/ou4VXwsgoMM)
 
 - 0:00 - Intro
 - 0:13 - Ex-01 Due Date Info
@@ -155,7 +155,7 @@
 - 49:41 - File I/O with Objects
 - 1:33:18 - Outro
 
-## W05-D03
+## [W05-D03](https://youtu.be/d5RTYdmkDRI)
 
 - 0:00 - Intro
 - 0:09 - Tonight's Agenda
@@ -173,7 +173,7 @@
 
 ----
 
-## W06-D01
+## [W06-D01](https://youtu.be/OE-aRNRBdSM)
 
 - 0:00 - Intro
 - 0:09 - Tonight's Agenda
@@ -182,7 +182,7 @@
 - 58:51 - Take-Home Exercises Review
 - 1:20:21 - Outro
 
-## W06-D02
+## [W06-D02](https://youtu.be/88SLcbYOsrU)
 
 - 0:00 - Intro
 - 0:10 - Tonight's Agenda
@@ -197,11 +197,11 @@
 
 ## W06-D03
 
-> In-Class 1
+> In-Class Assessment #1
 
 ----
 
-## W07-D01
+## [W07-D01](https://youtu.be/kSJklAo7LpU)
 
 - 0:00 - Intro
 - 0:14 - Student Questions
@@ -212,7 +212,7 @@
 - 1:37:43 - Code Fix!
 - 1:39:08 - Outro
 
-## W07-D02
+## [W07-D02](https://youtu.be/Ie4vzdAby_c)
 
 - 0:00 - Intro
 - 0:09 - Tonight's Agenda
@@ -225,7 +225,7 @@
 - 1:35:46 - Closing Remarks
 - 1:43:00 - Outro
 
-## W07-D03
+## [W07-D03](https://youtu.be/5X3pbboIBQs)
 
 - 0:00 - Intro
 - 0:10 - Tonight's Agenda & Upcoming Dates
@@ -247,7 +247,7 @@
 
 ----
 
-## W08-D01
+## [W08-D01](https://youtu.be/7UA0p7_ymc8)
 
 - 0:00 - Intro
 - 0:09 - Tonight's Agenda & Upcoming Dates
@@ -261,9 +261,9 @@
 
 ## W08-D02
 
-> In-Class Exam
+> In-Class Assessment #2
 
-## W08-D03
+## [W08-D03](https://youtu.be/QP5PovVcbYQ)
 
 0:00 - Intro
 0:09 - Tonight's Agenda
@@ -277,7 +277,7 @@
 
 ----
 
-## W09-D01
+## [W09-D01](https://youtu.be/GrlNPOei0xk)
 
 0:00 - Intro
 0:09 - Tonight's Agenda
@@ -291,7 +291,7 @@
 1:21:19 - To Be Continued....
 1:21:40 - Outro
 
-## W09-D02
+## [W09-D02](https://youtu.be/Gfcq75P_l3c)
 
 0:00 - Intro
 0:09 - Tonight's Agenda
@@ -303,7 +303,7 @@
 1:42:13 - Agenda for Next Class
 1:46:26 - Outro
 
-## W09-D03
+## [W09-D03](https://youtu.be/rPmyCRX0FbY)
 
 0:00 - Intro
 0:09 - Tonight's Agenda
@@ -314,7 +314,7 @@
 
 ----
 
-## W10-D01
+## [W10-D01](https://youtu.be/u6KTC8XjjAo)
 
 0:00 - Intro
 0:09 - Tonight's Agenda
@@ -323,7 +323,7 @@
 54:13 - Uploading Files
 1:36:28 - Outro
 
-## W10-D02
+## [W10-D02](https://youtu.be/Lhd8Xdl9H4c)
 
 0:00 - Intro
 0:09 - Tonight's Agenda
@@ -340,7 +340,7 @@
 
 A little tip at 1:15:24 about naming your parameter routes.
 
-## W10-D03
+## [W10-D03](https://youtu.be/kZnJRnjnj5E)
 
 0:00 - Intro
 0:09 - Tonight's Agenda and Announcements
@@ -349,7 +349,7 @@ A little tip at 1:15:24 about naming your parameter routes.
 
 ----
 
-## W11-D01
+## [W11-D01](https://youtu.be/7DepWEooWMQ)
 
 0:00 - Intro
 0:09 - Tonight's Agenda and Announcements
@@ -359,7 +359,7 @@ A little tip at 1:15:24 about naming your parameter routes.
 1:06:44 - Review IFormFile & System.IO Directory/Path/File
 1:39:49 - Outro
 
-## W11-D02
+## [W11-D02](https://youtu.be/Kg-lsVlEhSE)
 
 0:00 - Intro
 0:09 - Paginator - Hot Fix
@@ -371,7 +371,7 @@ A little tip at 1:15:24 about naming your parameter routes.
 1:24:40 - Bonus - More on POST vs GET & Stateless HTTP
 1:33:05 - Outro
 
-## W11-D03
+## [W11-D03](https://youtu.be/IuzD_t0lYMo)
 
 0:00 - Intro
 0:09 - Tonight's Agenda and Announcements
@@ -382,7 +382,7 @@ A little tip at 1:15:24 about naming your parameter routes.
 
 ----
 
-## W12-D01
+## [W12-D01](https://youtu.be/GhQgE0LE750)
 
 0:00 - Intro
 0:09 - Tonight's Agenda and Announcements
@@ -392,7 +392,7 @@ A little tip at 1:15:24 about naming your parameter routes.
 1:04:16 - Binding Form Data to a Product Object
 1:34:54 - Outro
 
-## W12-D02
+## [W12-D02](https://youtu.be/ILGNFrEdUbE)
 
 0:00 - Intro
 0:09 - Tonight's Agenda and Announcements
@@ -402,11 +402,11 @@ A little tip at 1:15:24 about naming your parameter routes.
 
 ## W12-D03
 
-> In-Class Assessment
+> In-Class Assessment #3
 
 ----
 
-## W13-D01
+## [W13-D01](https://youtu.be/S-bzKExwaFs)
 
 0:00 - Intro
 0:09 - Tonight's Agenda and Announcements
