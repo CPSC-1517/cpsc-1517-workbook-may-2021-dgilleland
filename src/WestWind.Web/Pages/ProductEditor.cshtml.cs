@@ -20,6 +20,7 @@ namespace WebApp.Pages
 
         public List<Category> Categories { get; set; }
         public List<SelectListItem> Suppliers { get; set; }
+        public string ErrorMessage { get; set; }
 
         [BindProperty]
         public Product ProductItem { get; set; }
@@ -77,9 +78,6 @@ namespace WebApp.Pages
                 return Page(); // Return the page as the POST result - This will preserve any user inputs
             }
         }
-
-        // TODO: Move this property back up  with the other later on
-        public string ErrorMessage { get; set; }
 
         public IActionResult OnPostDelete()
         {
