@@ -228,12 +228,17 @@
     - **Database** - Ensure Data Integrity
     - **Business Processing** - Enforce business rules
   - Try/Catch
+
+## Wednesday (August 4)
+
+- Validating User Input
   - Data Annotations
   - `asp-validation-for`
     - `libman install jquery -p unpkg`
     - `libman install jquery-validation -p unpkg`
     - `libman install jquery-validation-unobtrusive -p unpkg`
   - Read [https://www.learnrazorpages.com/razor-pages/validation](https://www.learnrazorpages.com/razor-pages/validation)
+- BLL - Querying with Navigation Properties
 
 ----
 
