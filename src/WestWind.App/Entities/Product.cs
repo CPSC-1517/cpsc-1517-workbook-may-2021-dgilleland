@@ -19,7 +19,7 @@ namespace WestWind.App.Entities
         [Column("ProductID")]
         public int ProductId { get; set; }
         [Required(ErrorMessage = "You must supply a product name - very important")]
-        [StringLength(40)]
+        [StringLength(40, MinimumLength = 5, ErrorMessage = "Product names should be between 5 and 40 character inclusive")]
         public string ProductName { get; set; }
         [Column("SupplierID")]
         public int SupplierId { get; set; }
