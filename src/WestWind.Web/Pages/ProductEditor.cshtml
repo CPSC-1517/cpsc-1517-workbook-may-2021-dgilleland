@@ -3,6 +3,10 @@
 @{
 }
 
+@section scripts{
+   <partial name="_ValidationScriptsPartial" />
+}
+
 <h1>Product Editor</h1>
 
 @if(Model.ProductItem != null)
@@ -33,18 +37,21 @@
     </label>
 
     <label>Product Name
+        <span asp-validation-for="ProductItem.ProductName" style="color:red;"></span>
         <input type="text" asp-for="ProductItem.ProductName" />
+        
     </label>
 
     <label>Supplier
         <select asp-items="Model.Suppliers" asp-for="ProductItem.SupplierId">
-            <option value="0">[Pick a Supplier]</option>
+            <option value="">[Pick a Supplier]</option>
         </select>
+        <span asp-validation-for="ProductItem.SupplierId" style="color:red;"></span>
     </label>
 
     <label>Category
         <select asp-for="ProductItem.CategoryId">
-            <option value="0">[Pick a Category]</option>
+            <option value="">[Pick a Category]</option>
             @{
                 foreach(var item in Model.Categories)
                 {
@@ -52,17 +59,21 @@
                 }
             }
         </select>
+        <span asp-validation-for="ProductItem.CategoryId" style="color:red;"></span>
     </label>
 
     <label>Quantity per Unit
+        <span asp-validation-for="ProductItem.QuantityPerUnit" style="color:red;"></span>
         <input type="text" asp-for="ProductItem.QuantityPerUnit" />
     </label>
 
     <label>Unit Price
+        <span asp-validation-for="ProductItem.UnitPrice" style="color:red;"></span>
         <input type="number" step="0.01" asp-for="ProductItem.UnitPrice" />
     </label>
 
     <label>Units on Order
+        <span asp-validation-for="ProductItem.UnitsOnOrder" style="color:red;"></span>
         <input type="number" asp-for="ProductItem.UnitsOnOrder" />
     </label>
 
