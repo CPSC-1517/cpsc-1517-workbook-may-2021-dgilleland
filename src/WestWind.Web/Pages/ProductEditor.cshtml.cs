@@ -37,24 +37,29 @@ namespace WebApp.Pages
         // An IActionResult allows me more control in communicating the results of this request to the web browser
         public IActionResult OnPostAdd()
         {
-            try
+            if (ModelState.IsValid) // recheck the validation based on the asp-validation-for
             {
-                _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
-                                                  // Use the POST-Redirect-GET pattern to prevent inadvertant resubmissions of POST requests
-                return RedirectToPage(new { id = ProductItem.ProductId });
-            }
-            catch (Exception ex)
-            {
-                // Start with the assumption that the given exception is the root of the problem
-                Exception rootCause = ex;
-                // Loop to "drill-down" to what the original cause of the problem is
-                while (rootCause.InnerException != null)
-                    rootCause = rootCause.InnerException;
+                try
+                {
+                    _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
+                                                      // Use the POST-Redirect-GET pattern to prevent inadvertant resubmissions of POST requests
+                    return RedirectToPage(new { id = ProductItem.ProductId });
+                }
+                catch (Exception ex)
+                {
+                    // Start with the assumption that the given exception is the root of the problem
+                    Exception rootCause = ex;
+                    // Loop to "drill-down" to what the original cause of the problem is
+                    while (rootCause.InnerException != null)
+                        rootCause = rootCause.InnerException;
 
-                ErrorMessage = rootCause.Message;
-                PopulateDropDown();
-                return Page(); // Return the page as the POST result - This will preserve any user inputs
+                    ErrorMessage = rootCause.Message;
+                    PopulateDropDown();
+                    return Page(); // Return the page as the POST result - This will preserve any user inputs
+                }
             }
+            PopulateDropDown();
+            return Page();
         }
 
         public IActionResult OnPostUpdate()
