@@ -231,6 +231,7 @@
 
 ## Wednesday (August 4)
 
+- BLL - Querying with Navigation Properties
 - Validating User Input
   - Data Annotations
   - `asp-validation-for`
@@ -238,11 +239,19 @@
     - `libman install jquery-validation -p unpkg`
     - `libman install jquery-validation-unobtrusive -p unpkg`
   - Read [https://www.learnrazorpages.com/razor-pages/validation](https://www.learnrazorpages.com/razor-pages/validation)
-- BLL - Querying with Navigation Properties
 
 ----
 
 ## Appendix
+
+### Self-Signed Certificates for LocalHost
+
+> See [Developing locally with ASP.NET Core under HTTPS, SSL, and Self-Signed Certs](https://www.hanselman.com/blog/developing-locally-with-aspnet-core-under-https-ssl-and-selfsigned-certs)
+> 
+> ```shell
+> dotnet dev-certs https --trust
+> ```
+
 
 ### Client-Server Setup Demo
 
