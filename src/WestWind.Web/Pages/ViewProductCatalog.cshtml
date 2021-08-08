@@ -32,6 +32,8 @@ else
         <td>Name</td>
         <td>Quantity Per Unit</td>
         <td>Price</td>
+        <td>Supplier</td>
+        <td>Category</td>
     </tr>
     @{
         // Loop through the products to create each row
@@ -42,6 +44,8 @@ else
                 <td>@item.ProductName</td>
                 <td>@item.QuantityPerUnit</td>
                 <td>@item.UnitPrice.ToString("C")</td>
+                <td>@item.Supplier.CompanyName</td>
+                <td>@item.Category.CategoryName</td>
             </tr>
         }
     }

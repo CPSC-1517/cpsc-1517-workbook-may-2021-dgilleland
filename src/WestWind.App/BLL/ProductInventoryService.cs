@@ -34,7 +34,11 @@ namespace WestWind.App.BLL
                                 // The .Skip() extension method says to "pass over" a certain number of rows
                                 .Skip(skip)
                                 // The .Take() extension method says to "retrieve" a certain number of rows
-                                .Take(take);
+                                .Take(take)
+                                // We can explicitly ask for the related data to be
+                                // retreived as well as the Product information.
+                                .Include(x => x.Supplier)
+                                .Include(x => x.Category);
             var itemCount = _context.Products.Where(item => item.ProductName.Contains(partialProductName)).Count();
             return new PartialList<Product>(itemCount, items.ToList());
         }
