@@ -9,17 +9,18 @@ using Microsoft.EntityFrameworkCore;
 namespace WestWind.App.Entities
 {
     [Index(nameof(CompanyName), Name = "CompanyName")]
-    [Index(nameof(AddressId), Name = "UX_Suppliers_AddressID", IsUnique = true)]
-    public partial class Supplier
+    [Index(nameof(AddressId), Name = "UX_Customers_AddressID", IsUnique = true)]
+    public partial class Customer
     {
-        public Supplier()
+        public Customer()
         {
-            Products = new HashSet<Product>();
+            Orders = new HashSet<Order>();
         }
 
         [Key]
-        [Column("SupplierID")]
-        public int SupplierId { get; set; }
+        [Column("CustomerID")]
+        [StringLength(5)]
+        public string CustomerId { get; set; }
         [Required]
         [StringLength(40)]
         public string CompanyName { get; set; }
@@ -30,7 +31,7 @@ namespace WestWind.App.Entities
         public string ContactTitle { get; set; }
         [Required]
         [StringLength(50)]
-        public string Email { get; set; }
+        public string ContactEmail { get; set; }
         [Column("AddressID")]
         public int AddressId { get; set; }
         [Required]
@@ -40,9 +41,9 @@ namespace WestWind.App.Entities
         public string Fax { get; set; }
 
         [ForeignKey(nameof(AddressId))]
-        [InverseProperty("Supplier")]
+        [InverseProperty("Customer")]
         public virtual Address Address { get; set; }
-        [InverseProperty(nameof(Product.Supplier))]
-        public virtual ICollection<Product> Products { get; set; }
+        [InverseProperty(nameof(Order.Customer))]
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

@@ -15,6 +15,11 @@ namespace WestWind.App.Entities
     [Index(nameof(SupplierId), Name = "SuppliersProducts")]
     public partial class Product
     {
+        public Product()
+        {
+            OrderDetails = new HashSet<OrderDetail>();
+        }
+
         [Key]
         [Column("ProductID")]
         public int ProductId { get; set; }
@@ -40,5 +45,7 @@ namespace WestWind.App.Entities
         [ForeignKey(nameof(SupplierId))]
         [InverseProperty("Products")]
         public virtual Supplier Supplier { get; set; }
+        [InverseProperty(nameof(OrderDetail.Product))]
+        public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }
 }
