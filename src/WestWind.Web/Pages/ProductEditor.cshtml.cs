@@ -25,8 +25,9 @@ namespace WebApp.Pages
         [BindProperty]
         public Product ProductItem { get; set; }
 
-        public void OnGet(int? id) // Allow an optional integer value for the id of the product to edit
+        public void OnGet(int? id, string feedback) // Allow an optional integer value for the id of the product to edit
         {
+            ErrorMessage = feedback;
             if (id.HasValue) // A nullable int will have a property called .HasValue
             {
                 ProductItem = _service.GetProduct(id.Value); // The .Value property of the nullable int is an acutal int
@@ -43,7 +44,7 @@ namespace WebApp.Pages
                 {
                     _service.AddProduct(ProductItem); // Calling the ProductInventoryService.AddProduct method
                                                       // Use the POST-Redirect-GET pattern to prevent inadvertant resubmissions of POST requests
-                    return RedirectToPage(new { id = ProductItem.ProductId });
+                    return RedirectToPage(new { id = ProductItem.ProductId, feedback = "New Product Added" });
                 }
                 catch (Exception ex)
                 {
