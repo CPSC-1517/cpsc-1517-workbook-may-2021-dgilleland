@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using RazorWebApp.FakeData;
 
 namespace MyApp.Namespace
 {
@@ -27,7 +28,11 @@ namespace MyApp.Namespace
         public string PartialColorName { get; set; }
         public void OnPostColorSearch()
         {
-
+            ColorShortList = 
+                FakingData.GetColors()
+                .Where(x => x.Name.ToLower().Contains(PartialColorName.ToLower()))
+                .Select(x => new SelectListItem(x.Name, x.Hex))
+                .ToList();
         }
         #endregion
 
