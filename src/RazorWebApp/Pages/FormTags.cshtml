@@ -23,6 +23,22 @@
     <input type="submit" value="Choose Partner" />
 </form>
 
+
+<div  style="background-color:aqua; padding: 10px;">
+<form method="post">
+    <input type="text" list="colors" asp-for="PreferredColor" placeholder="Enter a preferred color" />
+    <datalist id="colors">
+        @foreach(SelectListItem color in Model.ColorShortList)
+        {
+            <option value="@color.Value">@color.Text</option>
+        }
+    </datalist>
+    <label>Color Search
+        <input type="text" placeholder="Type part of a color name" asp-for="PartialColorName" />
+    </label>
+    <button type="submit" asp-page-handler="ColorSearch">Search Colors</button>
+</form>
+</div>
 <h2>&lt;TextArea&gt; Tag</h2>
 
 

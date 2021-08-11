@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace MyApp.Namespace
 {
@@ -16,6 +17,19 @@ namespace MyApp.Namespace
         public string BuddyName {get; set;}
         [BindProperty]
         public string Flavour { get; set; }
+
+
+        #region AdHoc DataList w. search
+        [BindProperty]
+        public string PreferredColor { get; set; }
+        public List<SelectListItem> ColorShortList { get; set; } = new(); // Ensure it's an empty list to start with
+        [BindProperty]
+        public string PartialColorName { get; set; }
+        public void OnPostColorSearch()
+        {
+
+        }
+        #endregion
 
 
         public void OnPost()
