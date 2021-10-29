@@ -13,6 +13,7 @@ namespace WebApp.Helpers
         public readonly int TotalItemCount;
         public readonly PageState CurrentState;
         public readonly PageRef CurrentPage;
+        private readonly int MaxPageLinks;
         private List<PageRef> PageReferences;
         public string FirstPageText = "<First>";
         public string LastPageText = "<Last>";
@@ -21,12 +22,13 @@ namespace WebApp.Helpers
         #endregion
 
         #region Constructor
-        public Paginator(int totalItemCount, PageState currentState)
+        public Paginator(int totalItemCount, PageState currentState, int maxPageLinks)
         {
             // 1) Set key properties
             TotalItemCount = totalItemCount;
             CurrentState = currentState;
             CurrentPage = new(currentState.CurrentPage, currentState.CurrentPage.ToString());
+            MaxPageLinks = maxPageLinks;
 
             // 2) Generate the list of page references
             PageReferences = new List<PageRef>();
@@ -73,7 +75,18 @@ namespace WebApp.Helpers
         {
             get
             {
-                return CurrentState.CurrentPage;
+                if (LastPage <= MaxPageLinks)
+                {
+                    return 1;
+                }
+                else if (LastPage - CurrentState.CurrentPage >= MaxPageLinks)
+                {
+                    return CurrentState.CurrentPage;
+                }
+                else
+                {
+                    return LastPage - MaxPageLinks + 1;
+                }
             }
         }
         ///<summary>LastPageNumber is the last page number in the set of Page Links</summary>
@@ -81,13 +94,14 @@ namespace WebApp.Helpers
         {
             get
             {
-                int last;
-                int calulatedLast = FirstPageNumber + CurrentState.PageSize - 1;
-                if(calulatedLast > LastPage)
-                    last = LastPage;
+                if (LastPage - CurrentState.CurrentPage < MaxPageLinks)
+                {
+                    return LastPage;
+                }
                 else
-                    last = calulatedLast;
-                return last;
+                {
+                    return CurrentState.CurrentPage + (MaxPageLinks - 1);
+                }
             }
         }
         #endregion

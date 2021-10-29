@@ -14,10 +14,11 @@ namespace WebApp.Pages
 
         public void OnGet(int? currentPage)
         {
+            int maxPageLinks = 10; // For new Paginator constructor
             int pageNumber = currentPage.HasValue ? currentPage.Value : 1;
             // -- Revamp below
             PageState current = new(pageNumber, 10);
-            Revamp = new Paginator(777, current);
+            Revamp = new Paginator(777, current, maxPageLinks);
         }
     }
 }
