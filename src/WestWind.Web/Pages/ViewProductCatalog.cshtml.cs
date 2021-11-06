@@ -30,10 +30,11 @@ namespace WebApp.Pages
             int pageNumber = currentPage.HasValue ? currentPage.Value : 1;
             int pageIndex = pageNumber - 1; //Zero-based for the calulation of skip
             int pageSize = 10;
+            int maxPageLinks = 5; // For new Paginator constructor
             int skip = pageIndex * pageSize;
             Catalog = _service.GetProducts(partialName, skip, pageSize);
             PageState current = new(pageNumber, pageSize);
-            Paging = new(Catalog.TotalCount, current);
+            Paging = new(Catalog.TotalCount, current, maxPageLinks);
         }
     }
 }
